@@ -1,0 +1,2150 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="615.33875"
+   height="530"
+   viewBox="-50 -50 615.33875 530"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="audio_amp.svg">
+  <metadata
+     id="metadata1190">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Audio Amp</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs1188" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     id="namedview1186"
+     showgrid="false"
+     showguides="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.3043827"
+     inkscape:cx="371.05614"
+     inkscape:cy="244.38491"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <title
+     id="title4">Audio Amp</title>
+  <style
+     type="text/css"
+     id="style6">
+path, polyline, polygon {stroke-linejoin:round;}
+path, polyline, polygon, line {stroke-linecap:round;}
+rect, circle, ellipse, polyline, line, polygon, path {shape-rendering:crispEdges;}
+</style>
+  <g
+     id="g8"
+     transform="translate(-409.5,-102.5)">
+    <g
+       id="g10">
+      <g
+         id="g12">
+        <text
+           x="567"
+           y="72"
+           font-size="7pt"
+           id="text14"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">Adafruit MAX9744</text>
+      </g>
+      <g
+         id="g16">
+        <text
+           x="567"
+           y="63"
+           font-size="7pt"
+           id="text18"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">JP1</text>
+      </g>
+      <polyline
+         points="650 105 650 75"
+         id="polyline20"
+         style="fill:none;stroke:#8d2323;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="650 75 500 75"
+         id="polyline22"
+         style="fill:none;stroke:#8d2323;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="500 75 500 105"
+         id="polyline24"
+         style="fill:none;stroke:#8d2323;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="500 105 650 105"
+         id="polyline26"
+         style="fill:none;stroke:#8d2323;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <g
+         id="g28">
+        <path
+           d="m 510,90 0,-4"
+           id="path30"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="509"
+           y="86"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,423,595)"
+           id="text32"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">1</text>
+        <circle
+           cx="510"
+           cy="83"
+           r="3"
+           id="circle34"
+           style="fill:none;stroke:#8d2323;stroke-width:1;shape-rendering:crispEdges" />
+      </g>
+      <g
+         id="g36">
+        <path
+           d="m 520,90 0,-4"
+           id="path38"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="519"
+           y="86"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,433,605)"
+           id="text40"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">2</text>
+        <circle
+           cx="520"
+           cy="83"
+           r="3"
+           id="circle42"
+           style="fill:none;stroke:#8d2323;stroke-width:1;shape-rendering:crispEdges" />
+      </g>
+      <g
+         id="g44">
+        <path
+           d="m 530,90 0,-4"
+           id="path46"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="529"
+           y="86"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,443,615)"
+           id="text48"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">3</text>
+        <circle
+           cx="530"
+           cy="83"
+           r="3"
+           id="circle50"
+           style="fill:none;stroke:#8d2323;stroke-width:1;shape-rendering:crispEdges" />
+      </g>
+      <g
+         id="g52">
+        <path
+           d="m 540,90 0,-4"
+           id="path54"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="539"
+           y="86"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,453,625)"
+           id="text56"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">4</text>
+        <circle
+           cx="540"
+           cy="83"
+           r="3"
+           id="circle58"
+           style="fill:none;stroke:#8d2323;stroke-width:1;shape-rendering:crispEdges" />
+      </g>
+      <g
+         id="g60">
+        <path
+           d="m 550,90 0,-4"
+           id="path62"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="549"
+           y="86"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,463,635)"
+           id="text64"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">5</text>
+        <circle
+           cx="550"
+           cy="83"
+           r="3"
+           id="circle66"
+           style="fill:none;stroke:#8d2323;stroke-width:1;shape-rendering:crispEdges" />
+      </g>
+      <g
+         id="g68">
+        <path
+           d="m 560,90 0,-4"
+           id="path70"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="559"
+           y="86"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,473,645)"
+           id="text72"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">6</text>
+        <circle
+           cx="560"
+           cy="83"
+           r="3"
+           id="circle74"
+           style="fill:none;stroke:#8d2323;stroke-width:1;shape-rendering:crispEdges" />
+      </g>
+      <g
+         id="g76">
+        <path
+           d="m 570,90 0,-4"
+           id="path78"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="569"
+           y="86"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,483,655)"
+           id="text80"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">7</text>
+        <circle
+           cx="570"
+           cy="83"
+           r="3"
+           id="circle82"
+           style="fill:none;stroke:#8d2323;stroke-width:1;shape-rendering:crispEdges" />
+      </g>
+      <g
+         id="g84">
+        <path
+           d="m 580,90 0,-4"
+           id="path86"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="579"
+           y="86"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,493,665)"
+           id="text88"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">8</text>
+        <circle
+           cx="580"
+           cy="83"
+           r="3"
+           id="circle90"
+           style="fill:none;stroke:#8d2323;stroke-width:1;shape-rendering:crispEdges" />
+      </g>
+      <g
+         id="g92">
+        <path
+           d="m 590,90 0,-4"
+           id="path94"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="589"
+           y="86"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,503,675)"
+           id="text96"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">9</text>
+        <circle
+           cx="590"
+           cy="83"
+           r="3"
+           id="circle98"
+           style="fill:none;stroke:#8d2323;stroke-width:1;shape-rendering:crispEdges" />
+      </g>
+      <g
+         id="g100">
+        <path
+           d="m 600,90 0,-4"
+           id="path102"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="599"
+           y="86"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,513,685)"
+           id="text104"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">10</text>
+        <circle
+           cx="600"
+           cy="83"
+           r="3"
+           id="circle106"
+           style="fill:none;stroke:#8d2323;stroke-width:1;shape-rendering:crispEdges" />
+      </g>
+      <g
+         id="g108">
+        <path
+           d="m 610,90 0,-4"
+           id="path110"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="609"
+           y="86"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,523,695)"
+           id="text112"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">11</text>
+        <circle
+           cx="610"
+           cy="83"
+           r="3"
+           id="circle114"
+           style="fill:none;stroke:#8d2323;stroke-width:1;shape-rendering:crispEdges" />
+      </g>
+      <g
+         id="g116">
+        <path
+           d="m 620,90 0,-4"
+           id="path118"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="619"
+           y="86"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,533,705)"
+           id="text120"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">12</text>
+        <circle
+           cx="620"
+           cy="83"
+           r="3"
+           id="circle122"
+           style="fill:none;stroke:#8d2323;stroke-width:1;shape-rendering:crispEdges" />
+      </g>
+      <g
+         id="g124">
+        <path
+           d="m 630,90 0,-4"
+           id="path126"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="629"
+           y="86"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,543,715)"
+           id="text128"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">13</text>
+        <circle
+           cx="630"
+           cy="83"
+           r="3"
+           id="circle130"
+           style="fill:none;stroke:#8d2323;stroke-width:1;shape-rendering:crispEdges" />
+      </g>
+      <g
+         id="g132">
+        <path
+           d="m 640,90 0,-4"
+           id="path134"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="639"
+           y="86"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,553,725)"
+           id="text136"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">14</text>
+        <circle
+           cx="640"
+           cy="83"
+           r="3"
+           id="circle138"
+           style="fill:none;stroke:#8d2323;stroke-width:1;shape-rendering:crispEdges" />
+      </g>
+    </g>
+    <g
+       id="g140">
+      <g
+         id="g142">
+        <text
+           x="387.5"
+           y="225"
+           font-size="7pt"
+           id="text144"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">Arduino Pro Mini - 5V/16MHz</text>
+      </g>
+      <g
+         id="g146">
+        <text
+           x="387.5"
+           y="216"
+           font-size="7pt"
+           id="text148"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">U1</text>
+      </g>
+      <g
+         id="g150">
+        <path
+           d="m 700,230 0,20"
+           id="path152"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="703"
+           y="252"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,451,955)"
+           id="text154"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">TX0</text>
+        <text
+           x="699"
+           y="245"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,454,944)"
+           id="text156"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">1</text>
+      </g>
+      <g
+         id="g158">
+        <path
+           d="m 680,230 0,20"
+           id="path160"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="683"
+           y="252"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,431,935)"
+           id="text162"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">RX1</text>
+        <text
+           x="679"
+           y="245"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,434,924)"
+           id="text164"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">2</text>
+      </g>
+      <g
+         id="g166">
+        <path
+           d="m 660,230 0,20"
+           id="path168"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="663"
+           y="252"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,411,915)"
+           id="text170"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">RST</text>
+        <text
+           x="659"
+           y="245"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,414,904)"
+           id="text172"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">3</text>
+
+      </g>
+      <g
+         id="g178">
+        <path
+           d="m 640,230 0,20"
+           id="path180"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="643"
+           y="252"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,391,895)"
+           id="text182"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">GND</text>
+        <text
+           x="639"
+           y="245"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,394,884)"
+           id="text184"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">4</text>
+      </g>
+      <g
+         id="g190">
+        <path
+           d="m 620,230 0,20"
+           id="path192"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="623"
+           y="252"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,371,875)"
+           id="text194"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">D2</text>
+        <text
+           x="619"
+           y="245"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,374,864)"
+           id="text196"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">5</text>
+      </g>
+      <g
+         id="g202">
+        <path
+           d="m 600,230 0,20"
+           id="path204"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="603"
+           y="252"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,351,855)"
+           id="text206"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">D3 &lt;- PWM</text>
+        <text
+           x="599"
+           y="245"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,354,844)"
+           id="text208"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">6</text>
+      </g>
+      <g
+         id="g214">
+        <path
+           d="m 580,230 0,20"
+           id="path216"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="583"
+           y="252"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,331,835)"
+           id="text218"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">D4</text>
+        <text
+           x="579"
+           y="245"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,334,824)"
+           id="text220"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">7</text>
+      </g>
+      <g
+         id="g226">
+        <path
+           d="m 560,230 0,20"
+           id="path228"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="563"
+           y="252"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,311,815)"
+           id="text230"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">D5 &lt;- PWM</text>
+        <text
+           x="559"
+           y="245"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,314,804)"
+           id="text232"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">8</text>
+      </g>
+      <g
+         id="g238">
+        <path
+           d="m 540,230 0,20"
+           id="path240"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="543"
+           y="252"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,291,795)"
+           id="text242"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">D6 &lt;- PWM</text>
+        <text
+           x="539"
+           y="245"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,294,784)"
+           id="text244"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">9</text>
+      </g>
+      <g
+         id="g250">
+        <path
+           d="m 520,230 0,20"
+           id="path252"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="523"
+           y="252"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,271,775)"
+           id="text254"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">D7</text>
+        <text
+           x="519"
+           y="245"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,274,764)"
+           id="text256"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">10</text>
+      </g>
+      <g
+         id="g262">
+        <path
+           d="m 500,230 0,20"
+           id="path264"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="503"
+           y="252"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,251,755)"
+           id="text266"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">D8</text>
+        <text
+           x="499"
+           y="245"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,254,744)"
+           id="text268"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">11</text>
+      </g>
+      <g
+         id="g274">
+        <path
+           d="m 480,230 0,20"
+           id="path276"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="483"
+           y="252"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,231,735)"
+           id="text278"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">D9 &lt;- PWM</text>
+        <text
+           x="479"
+           y="245"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,234,724)"
+           id="text280"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">12</text>
+      </g>
+      <g
+         id="g286">
+        <path
+           d="m 389.5,290.5 20,0"
+           id="path288"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="414.82999"
+           y="292.82999"
+           font-size="7pt"
+           id="text290"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">A4 &lt;- SCA</text>
+        <text
+           x="404.5"
+           y="289.5"
+           font-size="7pt"
+           id="text292"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">13</text>
+      </g>
+      <g
+         id="g298">
+        <path
+           d="m 389.5,310.5 20,0"
+           id="path300"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="414.82999"
+           y="314.17001"
+           font-size="7pt"
+           id="text302"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">A5 &lt;- SCL</text>
+        <text
+           x="404.5"
+           y="309.5"
+           font-size="7pt"
+           id="text304"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">14</text>
+      </g>
+      <g
+         id="g310">
+        <path
+           d="m 389.5,330.5 20,0"
+           id="path312"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="414.17001"
+           y="332.82999"
+           font-size="7pt"
+           id="text314"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">A6</text>
+        <text
+           x="404.5"
+           y="329.5"
+           font-size="7pt"
+           id="text316"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">15</text>
+      </g>
+      <g
+         id="g322">
+        <path
+           d="m 389.5,350.5 20,0"
+           id="path324"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="414.82999"
+           y="352.82999"
+           font-size="7pt"
+           id="text326"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">A7</text>
+        <text
+           x="404.5"
+           y="349.5"
+           font-size="7pt"
+           id="text328"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">16</text>
+      </g>
+      <g
+         id="g334">
+        <path
+           d="m 479.5,410.5 0,-20"
+           id="path336"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="482.5"
+           y="388.5"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,94,871)"
+           id="text338"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">PWM -&gt; D10</text>
+        <text
+           x="478.5"
+           y="395.5"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,83,874)"
+           id="text340"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">17</text>
+      </g>
+      <g
+         id="g346">
+        <path
+           d="m 499.5,410.5 0,-20"
+           id="path348"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="502.5"
+           y="388.5"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,114,891)"
+           id="text350"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">PWM -&gt; D11</text>
+        <text
+           x="498.5"
+           y="395.5"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,103,894)"
+           id="text352"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">18</text>
+      </g>
+      <g
+         id="g358">
+        <path
+           d="m 519.5,410.5 0,-20"
+           id="path360"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="522.5"
+           y="388.5"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,134,911)"
+           id="text362"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">D12</text>
+        <text
+           x="518.5"
+           y="395.5"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,123,914)"
+           id="text364"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">19</text>
+      </g>
+      <g
+         id="g370">
+        <path
+           d="m 539.5,410.5 0,-20"
+           id="path372"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="542.5"
+           y="388.5"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,154,931)"
+           id="text374"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">D13</text>
+        <text
+           x="538.5"
+           y="395.5"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,143,934)"
+           id="text376"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">20</text>
+      </g>
+      <g
+         id="g382">
+        <path
+           d="m 560,410 0,-20"
+           id="path384"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="563"
+           y="388"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,175,951)"
+           id="text386"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">A0</text>
+        <text
+           x="559"
+           y="395"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,164,954)"
+           id="text388"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">21</text>
+      </g>
+      <g
+         id="g394">
+        <path
+           d="m 580,410 0,-20"
+           id="path396"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="583"
+           y="388"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,195,971)"
+           id="text398"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">A1</text>
+        <text
+           x="579"
+           y="395"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,184,974)"
+           id="text400"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">22</text>
+      </g>
+      <g
+         id="g406">
+        <path
+           d="m 600,410 0,-20"
+           id="path408"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="603"
+           y="388"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,215,991)"
+           id="text410"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">A2</text>
+        <text
+           x="599"
+           y="395"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,204,994)"
+           id="text412"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">23</text>
+      </g>
+      <g
+         id="g418">
+        <path
+           d="m 620,410 0,-20"
+           id="path420"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="623"
+           y="388"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,235,1011)"
+           id="text422"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">A3</text>
+        <text
+           x="619"
+           y="395"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,224,1014)"
+           id="text424"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">24</text>
+      </g>
+      <g
+         id="g430">
+        <path
+           d="m 640,410 0,-20"
+           id="path432"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="643"
+           y="388"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,255,1031)"
+           id="text434"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">Vcc</text>
+        <text
+           x="639"
+           y="395"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,244,1034)"
+           id="text436"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">25</text>
+      </g>
+      <g
+         id="g442">
+        <path
+           d="m 660,410 0,-20"
+           id="path444"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="663"
+           y="388"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,275,1051)"
+           id="text446"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">RST</text>
+        <text
+           x="659"
+           y="395"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,264,1054)"
+           id="text448"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">26</text>
+      </g>
+      <g
+         id="g454">
+        <path
+           d="m 680,410 0,-20"
+           id="path456"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="683"
+           y="388"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,295,1071)"
+           id="text458"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">GND</text>
+        <text
+           x="677"
+           y="395"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,282,1072)"
+           id="text460"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">27</text>
+      </g>
+      <g
+         id="g466">
+        <path
+           d="m 700,410 0,-20"
+           id="path468"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="703"
+           y="388"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,315,1091)"
+           id="text470"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">RAW</text>
+        <text
+           x="699"
+           y="395"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,304,1094)"
+           id="text472"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">28</text>
+      </g>
+      <g
+         id="g478">
+        <path
+           d="m 759.5,370.5 -20,0"
+           id="path480"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="737.5"
+           y="373.5"
+           font-size="7pt"
+           id="text482"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">DTR</text>
+        <text
+           x="744.5"
+           y="369.5"
+           font-size="7pt"
+           id="text484"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">29</text>
+      </g>
+      <g
+         id="g490">
+        <path
+           d="m 759.5,350.5 -20,0"
+           id="path492"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="737.5"
+           y="353.5"
+           font-size="7pt"
+           id="text494"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">TX0</text>
+        <text
+           x="744.5"
+           y="349.5"
+           font-size="7pt"
+           id="text496"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">30</text>
+      </g>
+      <g
+         id="g502">
+        <path
+           d="m 759.5,330.5 -20,0"
+           id="path504"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="737.5"
+           y="333.5"
+           font-size="7pt"
+           id="text506"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">RX1</text>
+        <text
+           x="744.5"
+           y="329.5"
+           font-size="7pt"
+           id="text508"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">31</text>
+      </g>
+      <g
+         id="g514">
+        <path
+           d="m 759.5,310.5 -20,0"
+           id="path516"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="737.5"
+           y="313.5"
+           font-size="7pt"
+           id="text518"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">Vcc</text>
+        <text
+           x="744.5"
+           y="309.5"
+           font-size="7pt"
+           id="text520"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">32</text>
+      </g>
+      <g
+         id="g526">
+        <path
+           d="m 759.5,290.5 -20,0"
+           id="path528"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="737.5"
+           y="293.5"
+           font-size="7pt"
+           id="text530"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">GND</text>
+        <text
+           x="744.5"
+           y="289.5"
+           font-size="7pt"
+           id="text532"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">33</text>
+      </g>
+      <g
+         id="g538">
+        <path
+           d="m 759.5,270.5 -20,0"
+           id="path540"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="737.5"
+           y="273.5"
+           font-size="7pt"
+           id="text542"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#0000ff">GND</text>
+        <text
+           x="744.5"
+           y="269.5"
+           font-size="7pt"
+           id="text544"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#0000ff">34</text>
+      </g>
+      <rect
+         x="410"
+         y="250"
+         rx="3"
+         ry="3"
+         width="330"
+         height="140"
+         id="rect550"
+         style="fill:none;stroke:#000000;stroke-width:2;shape-rendering:crispEdges" />
+    </g>
+    <polyline
+       points="540 90 540 120 360 120 360 290 389.5 290 389.5 290.5"
+       id="polyline560"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <polyline
+       points="550 90 550 130 370 130 370 310 389.5 310 389.5 310.5"
+       id="polyline562"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <g
+       id="g564">
+      <g
+         id="g566">
+        <text
+           x="922"
+           y="332.35938"
+           font-size="7pt"
+           id="text568"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">7805</text>
+      </g>
+      <g
+         id="g570">
+        <text
+           x="922"
+           y="323.21875"
+           font-size="7pt"
+           id="text572"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">U2</text>
+      </g>
+      <polyline
+         points="890 290 890 350"
+         id="polyline574"
+         style="fill:none;stroke:#8d2323;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="890 350 920 350"
+         id="polyline576"
+         style="fill:none;stroke:#8d2323;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="920 350 920 290"
+         id="polyline578"
+         style="fill:none;stroke:#8d2323;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="920 290 890 290"
+         id="polyline580"
+         style="fill:none;stroke:#8d2323;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <g
+         id="g582">
+        <path
+           d="m 910,280 0,10"
+           id="path584"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="913"
+           y="293"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,620,1206)"
+           id="text586"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">VI</text>
+        <text
+           x="909"
+           y="284"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,625,1193)"
+           id="text588"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#8d2323">1</text>
+      </g>
+      <g
+         id="g594">
+        <path
+           d="m 880,320 10,0"
+           id="path596"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="884"
+           y="319"
+           font-size="7pt"
+           id="text600"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">2</text>
+      </g>
+      <g
+         id="g606">
+        <path
+           d="m 910,360 0,-10"
+           id="path608"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="913"
+           y="347"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,566,1260)"
+           id="text610"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#8d2323">VO</text>
+        <text
+           x="909"
+           y="356"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,553,1265)"
+           id="text612"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">3</text>
+      </g>
+      <g
+         id="g618">
+        <text
+           x="893"
+           y="312"
+           font-size="6"
+           font-style=" "
+           type="comment"
+           font-weight=" "
+           transform="matrix(0,1,-1,0,1205,-581)"
+           id="text620"
+           style="font-size:6px;font-family:'times New Roman';text-anchor:start;fill:#000000">GND</text>
+      </g>
+    </g>
+    <polyline
+       points="640 90 640 120 910 120 910 280"
+       id="polyline622"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <polyline
+       points="910 360 910 450 640 450 640 410"
+       id="polyline624"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <g
+       id="g626">
+      <g
+         id="g628">
+        <text
+           x="864.29688"
+           y="217"
+           font-size="7pt"
+           id="text630"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">1u</text>
+      </g>
+      <g
+         id="g632">
+        <text
+           x="864.29999"
+           y="207.87"
+           font-size="7pt"
+           id="text634"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">C1</text>
+      </g>
+      <g
+         id="g636">
+        <path
+           d="m 890,230 -17,0"
+           id="path638"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+      <g
+         id="g648">
+        <path
+           d="m 850,230 19,0"
+           id="path650"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+      <polyline
+         points="873 220 873 240"
+         id="polyline660"
+         style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <path
+         d="m 869,230 a 16.0836,16.0836 0 0 1 -3,10"
+         id="path662"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <path
+         d="m 866,220 a 16.2917,16.2917 0 0 1 3,10"
+         id="path664"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    </g>
+    <g
+       id="g666">
+      <g
+         id="g668">
+        <text
+           x="864.28125"
+           y="259"
+           font-size="7pt"
+           id="text670"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">1u</text>
+      </g>
+      <g
+         id="g672">
+        <text
+           x="864.28906"
+           y="249.85938"
+           font-size="7pt"
+           id="text674"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">C2</text>
+      </g>
+      <polyline
+         points="868 278 868 262"
+         id="polyline676"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <g
+         id="g678">
+        <path
+           d="m 860,270 -10,0"
+           id="path680"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+      <polyline
+         points="880 270 872 270"
+         id="polyline690"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="872 262 872 278"
+         id="polyline692"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <g
+         id="g694">
+        <path
+           d="m 880,270 10,0"
+           id="path696"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+      <polyline
+         points="868 270 860 270"
+         id="polyline706"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    </g>
+    <g
+       id="g708">
+      <g
+         id="g710">
+        <text
+           x="864.28125"
+           y="359"
+           font-size="7pt"
+           id="text712"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">1u</text>
+      </g>
+      <g
+         id="g714">
+        <text
+           x="864.28906"
+           y="349.85938"
+           font-size="7pt"
+           id="text716"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">C3</text>
+      </g>
+      <polyline
+         points="868 378 868 362"
+         id="polyline718"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <g
+         id="g720">
+        <path
+           d="m 860,370 -10,0"
+           id="path722"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+      <polyline
+         points="880 370 872 370"
+         id="polyline732"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="872 362 872 378"
+         id="polyline734"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <g
+         id="g736">
+        <path
+           d="m 880,370 10,0"
+           id="path738"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+      <polyline
+         points="868 370 860 370"
+         id="polyline748"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    </g>
+    <g
+       id="g750">
+      <g
+         id="g752">
+        <text
+           x="864.29688"
+           y="397"
+           font-size="7pt"
+           id="text754"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">1u</text>
+      </g>
+      <g
+         id="g756">
+        <text
+           x="864.29999"
+           y="387.87"
+           font-size="7pt"
+           id="text758"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">C4</text>
+      </g>
+      <g
+         id="g760">
+        <path
+           d="m 890,410 -17,0"
+           id="path762"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+      <g
+         id="g772">
+        <path
+           d="m 850,410 19,0"
+           id="path774"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+      <polyline
+         points="873 400 873 420"
+         id="polyline784"
+         style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <path
+         d="m 869,410 a 16.0836,16.0836 0 0 1 -3,10"
+         id="path786"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <path
+         d="m 866,400 a 16.2917,16.2917 0 0 1 3,10"
+         id="path788"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    </g>
+    <polyline
+       points="890 230 910 230"
+       id="polyline790"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <g
+       id="g792">
+      <circle
+         cx="910"
+         cy="230"
+         r="2.5"
+         id="circle794"
+         style="fill:#cc0000;stroke-width:1;shape-rendering:crispEdges" />
+    </g>
+    <polyline
+       points="890 270 910 270"
+       id="polyline796"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <g
+       id="g798">
+      <circle
+         cx="910"
+         cy="270"
+         r="2.5"
+         id="circle800"
+         style="fill:#cc0000;stroke-width:1;shape-rendering:crispEdges" />
+    </g>
+    <polyline
+       points="850 230 830 230"
+       id="polyline802"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <polyline
+       points="850 270 830 270"
+       id="polyline804"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <polyline
+       points="850 370 830 370"
+       id="polyline806"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <polyline
+       points="850 410 830 410"
+       id="polyline808"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <polyline
+       points="890 370 910 370"
+       id="polyline810"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <g
+       id="g812">
+      <circle
+         cx="910"
+         cy="370"
+         r="2.5"
+         id="circle814"
+         style="fill:#cc0000;stroke-width:1;shape-rendering:crispEdges" />
+    </g>
+    <polyline
+       points="890 410 910 410"
+       id="polyline816"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <g
+       id="g818">
+      <circle
+         cx="910"
+         cy="410"
+         r="2.5"
+         id="circle820"
+         style="fill:#cc0000;stroke-width:1;shape-rendering:crispEdges" />
+    </g>
+    <polyline
+       points="570 90 570 150 480 150 480 230"
+       id="polyline822"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <polyline
+       points="580 90 580 160 500 160 500 230"
+       id="polyline824"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <g
+       id="g826">
+      <g
+         id="g828">
+        <text
+           x="467"
+           y="512.35938"
+           font-size="7pt"
+           id="text830"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">1k</text>
+      </g>
+      <g
+         id="g832">
+        <text
+           x="467"
+           y="503.22"
+           font-size="7pt"
+           id="text834"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">R1</text>
+      </g>
+      <polyline
+         points="460 515 455 512"
+         id="polyline836"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="465 507 455 502"
+         id="polyline838"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="455 512 465 507"
+         id="polyline840"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <g
+         id="g842">
+        <path
+           d="m 460,520 0,-5"
+           id="path844"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+      <polyline
+         points="455 493 465 488"
+         id="polyline854"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="455 502 465 498"
+         id="polyline856"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="465 498 455 493"
+         id="polyline858"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="465 488 460 485"
+         id="polyline860"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <g
+         id="g862">
+        <path
+           d="m 460,480 0,5"
+           id="path864"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+    </g>
+    <g
+       id="g874">
+      <g
+         id="g876">
+        <text
+           x="507"
+           y="512.35938"
+           font-size="7pt"
+           id="text878"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">1k</text>
+      </g>
+      <g
+         id="g880">
+        <text
+           x="507"
+           y="503.22"
+           font-size="7pt"
+           id="text882"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">R2</text>
+      </g>
+      <polyline
+         points="500 515 495 512"
+         id="polyline884"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="505 507 495 502"
+         id="polyline886"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="495 512 505 507"
+         id="polyline888"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <g
+         id="g890">
+        <path
+           d="m 500,520 0,-5"
+           id="path892"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+      <polyline
+         points="495 493 505 488"
+         id="polyline902"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="495 502 505 498"
+         id="polyline904"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="505 498 495 493"
+         id="polyline906"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="505 488 500 485"
+         id="polyline908"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <g
+         id="g910">
+        <path
+           d="m 500,480 0,5"
+           id="path912"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+    </g>
+    <g
+       id="g922">
+      <g
+         id="g924">
+        <text
+           x="479"
+           y="562.35938"
+           font-size="7pt"
+           id="text926"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">LED</text>
+      </g>
+      <g
+         id="g928">
+        <text
+           x="479.01999"
+           y="553.21997"
+           font-size="7pt"
+           id="text930"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">D1</text>
+      </g>
+      <path
+         d="m 473,565 -2,-4 -2,2 z"
+         id="path932"
+         inkscape:connector-curvature="0"
+         style="fill:#880000;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <path
+         d="m 477,561 -2,-4 -2,2 z"
+         id="path934"
+         inkscape:connector-curvature="0"
+         style="fill:#880000;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <g
+         id="g936">
+        <path
+           d="m 460,570 0,-15"
+           id="path938"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+      <polyline
+         points="466 558 473 565"
+         id="polyline948"
+         style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="470 554 477 561"
+         id="polyline950"
+         style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <g
+         id="g952">
+        <path
+           d="m 460,530 0,15"
+           id="path954"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+      <polyline
+         points="468 555 452 555"
+         id="polyline964"
+         style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <path
+         d="m 454,545 6,10 7,-10 z"
+         id="path966"
+         inkscape:connector-curvature="0"
+         style="fill:#880000;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    </g>
+    <g
+       id="g968">
+      <g
+         id="g970">
+        <text
+           x="519"
+           y="562.35938"
+           font-size="7pt"
+           id="text972"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">LED</text>
+      </g>
+      <g
+         id="g974">
+        <text
+           x="519"
+           y="553.21997"
+           font-size="7pt"
+           id="text976"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">D2</text>
+      </g>
+      <path
+         d="m 513,565 -2,-4 -2,2 z"
+         id="path978"
+         inkscape:connector-curvature="0"
+         style="fill:#880000;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <path
+         d="m 517,561 -2,-4 -2,2 z"
+         id="path980"
+         inkscape:connector-curvature="0"
+         style="fill:#880000;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <g
+         id="g982">
+        <path
+           d="m 500,570 0,-15"
+           id="path984"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+      <polyline
+         points="506 558 513 565"
+         id="polyline994"
+         style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="510 554 517 561"
+         id="polyline996"
+         style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <g
+         id="g998">
+        <path
+           d="m 500,530 0,15"
+           id="path1000"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+      <polyline
+         points="508 555 492 555"
+         id="polyline1010"
+         style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <path
+         d="m 494,545 6,10 7,-10 z"
+         id="path1012"
+         inkscape:connector-curvature="0"
+         style="fill:#880000;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    </g>
+    <g
+       id="g1014">
+      <g
+         id="g1016">
+        <text
+           x="927"
+           y="540.9375"
+           font-size="7pt"
+           id="text1018"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">TSOP38238</text>
+      </g>
+      <g
+         id="g1020">
+        <text
+           x="927.00781"
+           y="531.79999"
+           font-size="7pt"
+           id="text1022"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">U3</text>
+      </g>
+      <rect
+         x="865"
+         y="520"
+         width="60"
+         height="50"
+         id="rect1024"
+         style="fill:none;stroke:#8d2323;stroke-width:1;shape-rendering:crispEdges" />
+      <g
+         id="g1026">
+        <path
+           d="m 880,490 0,30"
+           id="path1028"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="883"
+           y="523"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,360,1406)"
+           id="text1030"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">OUT</text>
+        <text
+           x="879"
+           y="514"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,365,1393)"
+           id="text1032"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#8d2323">1</text>
+      </g>
+      <g
+         id="g1038">
+        <path
+           d="m 895,490 0,30"
+           id="path1040"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="898"
+           y="523"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,375,1421)"
+           id="text1042"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">GND</text>
+        <text
+           x="894"
+           y="514"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,380,1408)"
+           id="text1044"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#8d2323">2</text>
+      </g>
+      <g
+         id="g1050">
+        <path
+           d="m 910,490 0,30"
+           id="path1052"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#8d2323;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+        <text
+           x="913"
+           y="523"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,390,1436)"
+           id="text1054"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:end;fill:#8d2323">Vs</text>
+        <text
+           x="909"
+           y="514"
+           font-size="7pt"
+           transform="matrix(0,-1,1,0,395,1423)"
+           id="text1056"
+           style="font-size:8.75px;font-family:Verdana;text-anchor:start;fill:#8d2323">3</text>
+      </g>
+    </g>
+    <polyline
+       points="910 490 910 450"
+       id="polyline1062"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <polyline
+       points="500 520 500 530"
+       id="polyline1064"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <polyline
+       points="460 520 460 530"
+       id="polyline1066"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <g
+       id="g1068">
+      <circle
+         cx="910"
+         cy="450"
+         r="2.5"
+         id="circle1070"
+         style="fill:#cc0000;stroke-width:1;shape-rendering:crispEdges" />
+    </g>
+    <polyline
+       points="479.5 410.5 479.5 420 460 420 460 480"
+       id="polyline1072"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <polyline
+       points="499.5 410.5 499.5 480 500 480"
+       id="polyline1074"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <polyline
+       points="460 570 460 580 680 580 680 460"
+       id="polyline1076"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <polyline
+       points="500 570 500 580"
+       id="polyline1078"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <g
+       id="g1080">
+      <circle
+         cx="500"
+         cy="580"
+         r="2.5"
+         id="circle1082"
+         style="fill:#cc0000;stroke-width:1;shape-rendering:crispEdges" />
+    </g>
+    <polyline
+       points="630 90 630 130 830 130 830 460 680 460 680 410"
+       id="polyline1084"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <g
+       id="g1086">
+      <circle
+         cx="830"
+         cy="230"
+         r="2.5"
+         id="circle1088"
+         style="fill:#cc0000;stroke-width:1;shape-rendering:crispEdges" />
+    </g>
+    <g
+       id="g1090">
+      <circle
+         cx="830"
+         cy="270"
+         r="2.5"
+         id="circle1092"
+         style="fill:#cc0000;stroke-width:1;shape-rendering:crispEdges" />
+    </g>
+    <g
+       id="g1094">
+      <circle
+         cx="830"
+         cy="370"
+         r="2.5"
+         id="circle1096"
+         style="fill:#cc0000;stroke-width:1;shape-rendering:crispEdges" />
+    </g>
+    <g
+       id="g1098">
+      <circle
+         cx="830"
+         cy="410"
+         r="2.5"
+         id="circle1100"
+         style="fill:#cc0000;stroke-width:1;shape-rendering:crispEdges" />
+    </g>
+    <polyline
+       points="895 490 895 460 830 460"
+       id="polyline1102"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <g
+       id="g1104">
+      <circle
+         cx="830"
+         cy="460"
+         r="2.5"
+         id="circle1106"
+         style="fill:#cc0000;stroke-width:1;shape-rendering:crispEdges" />
+    </g>
+    <g
+       id="g1108">
+      <circle
+         cx="680"
+         cy="460"
+         r="2.5"
+         id="circle1110"
+         style="fill:#cc0000;stroke-width:1;shape-rendering:crispEdges" />
+    </g>
+    <polyline
+       points="519.5 410.5 519.5 470 880 470 880 490"
+       id="polyline1112"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <g
+       eelibtitle="Resistor(US)"
+       package-default="R3"
+       id="g1114">
+      <g
+         id="g1116">
+        <text
+           x="604"
+           y="152"
+           font-size="7pt"
+           id="text1118"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">1k</text>
+      </g>
+      <g
+         id="g1120">
+        <text
+           x="604"
+           y="143"
+           font-size="7pt"
+           id="text1122"
+           style="font-size:8.75px;font-family:Arial;text-anchor:start;fill:#000080">R3</text>
+      </g>
+      <polyline
+         points="625 160 622 165"
+         id="polyline1124"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="617 155 612 165"
+         id="polyline1126"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="622 165 617 155"
+         id="polyline1128"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <g
+         id="g1130">
+        <path
+           d="m 630,160 -5,0"
+           id="path1132"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+      <polyline
+         points="603 165 598 155"
+         id="polyline1142"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="612 165 608 155"
+         id="polyline1144"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="608 155 603 165"
+         id="polyline1146"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <polyline
+         points="598 155 595 160"
+         id="polyline1148"
+         style="fill:none;stroke:#a00000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      <g
+         id="g1150">
+        <path
+           d="m 590,160 5,0"
+           id="path1152"
+           inkscape:connector-curvature="0"
+           style="fill:none;stroke:#880000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+      </g>
+    </g>
+    <polyline
+       points="590 160 580 160"
+       id="polyline1162"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <g
+       id="g1164">
+      <circle
+         cx="580"
+         cy="160"
+         r="2.5"
+         id="circle1166"
+         style="fill:#cc0000;stroke-width:1;shape-rendering:crispEdges" />
+    </g>
+    <polyline
+       points="630 160 630 130"
+       id="polyline1168"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <g
+       id="g1170">
+      <circle
+         cx="630"
+         cy="130"
+         r="2.5"
+         id="circle1172"
+         style="fill:#cc0000;stroke-width:1;shape-rendering:crispEdges" />
+    </g>
+    <polyline
+       points="880 320 830 320"
+       id="polyline1174"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <g
+       id="g1176">
+      <circle
+         cx="830"
+         cy="320"
+         r="2.5"
+         id="circle1178"
+         style="fill:#cc0000;stroke-width:1;shape-rendering:crispEdges" />
+    </g>
+    <polyline
+       points="560 90 560 140 380 140 380 450 640 450"
+       id="polyline1180"
+       style="fill:none;stroke:#008800;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;shape-rendering:crispEdges" />
+    <g
+       id="g1182">
+      <circle
+         cx="640"
+         cy="450"
+         r="2.5"
+         id="circle1184"
+         style="fill:#cc0000;stroke-width:1;shape-rendering:crispEdges" />
+    </g>
+  </g>
+</svg>

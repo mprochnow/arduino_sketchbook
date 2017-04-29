@@ -91,39 +91,43 @@ void loop() {
 void stepForward() {
     int i = 0;
     
-    for (i = 0; i < 2*diff; ++i) {
-        rightHip.writeMicroseconds(rightHipMiddle-diff+i);
-        leftHip.writeMicroseconds(leftHipMiddle-diff+i);
+    for (i = 0; i < diff; ++i) {
+        rightHip.writeMicroseconds(rightHipMiddle - diff + i);
+        leftHip.writeMicroseconds(leftHipMiddle - diff + i);
         delay(d);
     }
 
     for (i = 0; i < diff; ++i) {
-        rightAnkle.writeMicroseconds(rightAnkleMiddle-diff*factor2+i*factor2);
-        leftAnkle.writeMicroseconds(leftAnkleMiddle-diff+i);
+        rightHip.writeMicroseconds(rightHipMiddle + i);
+        leftHip.writeMicroseconds(leftHipMiddle + i);
+        rightAnkle.writeMicroseconds(rightAnkleMiddle - diff * factor2 + i * factor2);
+        leftAnkle.writeMicroseconds(leftAnkleMiddle - diff + i);
         delay(d);
     }
 
     for (i = 0; i < diff; ++i) {
-        rightAnkle.writeMicroseconds(rightAnkleMiddle+i);
-        leftAnkle.writeMicroseconds(leftAnkleMiddle+i*factor2);
-        delay(d);
-    }
-
-    for (i = 0; i < 2*diff; ++i) {
-        rightHip.writeMicroseconds(rightHipMiddle+diff-i);
-        leftHip.writeMicroseconds(leftHipMiddle+diff-i);
+        rightAnkle.writeMicroseconds(rightAnkleMiddle + i);
+        leftAnkle.writeMicroseconds(leftAnkleMiddle + i * factor2);
         delay(d);
     }
 
     for (i = 0; i < diff; ++i) {
-        rightAnkle.writeMicroseconds(rightAnkleMiddle+diff-i);
-        leftAnkle.writeMicroseconds(leftAnkleMiddle+diff*factor2-i*factor2);
+        rightHip.writeMicroseconds(rightHipMiddle + diff - i);
+        leftHip.writeMicroseconds(leftHipMiddle + diff - i);
         delay(d);
     }
 
     for (i = 0; i < diff; ++i) {
-        rightAnkle.writeMicroseconds(rightAnkleMiddle-i*factor2);
-        leftAnkle.writeMicroseconds(leftAnkleMiddle-i);
+        rightHip.writeMicroseconds(rightHipMiddle - i);
+        leftHip.writeMicroseconds(leftHipMiddle - i);
+        rightAnkle.writeMicroseconds(rightAnkleMiddle + diff - i);
+        leftAnkle.writeMicroseconds(leftAnkleMiddle + diff * factor2 - i * factor2);
+        delay(d);
+    }
+
+    for (i = 0; i < diff; ++i) {
+        rightAnkle.writeMicroseconds(rightAnkleMiddle - i * factor2);
+        leftAnkle.writeMicroseconds(leftAnkleMiddle - i);
         delay(d);
     }
 }

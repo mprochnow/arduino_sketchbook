@@ -47,43 +47,6 @@ void loop() {
             delay(DELAY);
         }
 
-        // rotate hip forward
-        for (i = 0; i < MOVE; ++i) {
-            leftHip.writeMicroseconds(LEFT_HIP_MIDDLE+i);
-            delay(DELAY);
-        }
-    
-        for (i = 0; i < MOVE; ++i) {
-            rightAnkle.writeMicroseconds(RIGHT_ANKLE_MIDDLE - MOVE*FACTOR+i*FACTOR);
-            leftAnkle.writeMicroseconds(LEFT_ANKLE_MIDDLE - MOVE+i);
-            delay(DELAY);
-        }
-    
-        for (i = 0; i < MOVE; ++i) {
-            rightAnkle.writeMicroseconds(RIGHT_ANKLE_MIDDLE+i);
-            leftAnkle.writeMicroseconds(LEFT_ANKLE_MIDDLE+i*FACTOR);
-            leftHip.writeMicroseconds(LEFT_HIP_MIDDLE+MOVE-i);
-            delay(DELAY);
-        }
-    
-        for (i = 0; i < MOVE; ++i) {
-            rightHip.writeMicroseconds(RIGHT_HIP_MIDDLE-i);
-            leftHip.writeMicroseconds(LEFT_HIP_MIDDLE-i);
-            delay(DELAY);
-        }
-    
-        for (i = 0; i < MOVE; ++i) {
-            rightAnkle.writeMicroseconds(RIGHT_ANKLE_MIDDLE+MOVE-i);
-            leftAnkle.writeMicroseconds(LEFT_ANKLE_MIDDLE+MOVE*FACTOR-i*FACTOR);
-            delay(DELAY);
-        }
-    
-        for (i = 0; i < MOVE; ++i) {
-            rightAnkle.writeMicroseconds(RIGHT_ANKLE_MIDDLE-i*FACTOR);
-            leftAnkle.writeMicroseconds(LEFT_ANKLE_MIDDLE-i);
-            delay(DELAY);
-        }
-
         running = true;
     }
 
@@ -92,13 +55,6 @@ void loop() {
 
 void stepForward() {
     int i = 0;
-
-    // rotate to center
-    for (i = 0; i < MOVE; ++i) {
-        rightHip.writeMicroseconds(RIGHT_HIP_MIDDLE - MOVE + i);
-        leftHip.writeMicroseconds(LEFT_HIP_MIDDLE - MOVE + i);
-        delay(DELAY);
-    }
 
     // rotate left
     for (i = 0; i < MOVE; ++i) {
@@ -136,6 +92,13 @@ void stepForward() {
     for (i = 0; i < MOVE; ++i) {
         rightAnkle.writeMicroseconds(RIGHT_ANKLE_MIDDLE - i * FACTOR);
         leftAnkle.writeMicroseconds(LEFT_ANKLE_MIDDLE - i);
+        delay(DELAY);
+    }
+
+    // rotate to center
+    for (i = 0; i < MOVE; ++i) {
+        rightHip.writeMicroseconds(RIGHT_HIP_MIDDLE - MOVE + i);
+        leftHip.writeMicroseconds(LEFT_HIP_MIDDLE - MOVE + i);
         delay(DELAY);
     }
 }

@@ -1,6 +1,6 @@
 #include <Servo.h>
 
-#define DELAY               3
+#define DELAY 3
 
 struct Joint
 {
@@ -54,6 +54,13 @@ Joint leftAnkle(4, 1140, 1490, 2190);
 Joint rightHip(3, 950, 1300, 1650);
 Joint leftHip(2, 1150, 1500, 1850);
 
+/*
+Joint rightAnkle(5, 950, 1510, 1860);
+Joint leftAnkle(4, 1140, 1490, 2190);
+Joint rightHip(3, 950, 1290, 1650);
+Joint leftHip(2, 1100, 1500, 1930);
+*/
+
 void stepForward();
 
 void setup() {
@@ -68,7 +75,6 @@ bool running = false;
 void loop()
 {
     int i = 0;
-    int j = 0;
 
     if (!running)
     {
@@ -90,7 +96,6 @@ void loop()
 
 void stepForward() {
     int i = 0;
-    int j = 0;
 
     // left step
     for (i = 0; i < leftAnkle.distMinToMiddle; ++i)

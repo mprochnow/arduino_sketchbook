@@ -92,13 +92,15 @@ void loop() {
 
 void stepForward() {
     int i = 0;
-    
+
+    // rotate to center
     for (i = 0; i < MOVE; ++i) {
         rightHip.writeMicroseconds(RIGHT_HIP_MIDDLE - MOVE + i);
         leftHip.writeMicroseconds(LEFT_HIP_MIDDLE - MOVE + i);
         delay(DELAY);
     }
 
+    // rotate left
     for (i = 0; i < MOVE; ++i) {
         rightHip.writeMicroseconds(RIGHT_HIP_MIDDLE + i);
         leftHip.writeMicroseconds(LEFT_HIP_MIDDLE + i);
@@ -107,18 +109,21 @@ void stepForward() {
         delay(DELAY);
     }
 
+    // lean right
     for (i = 0; i < MOVE; ++i) {
         rightAnkle.writeMicroseconds(RIGHT_ANKLE_MIDDLE + i);
         leftAnkle.writeMicroseconds(LEFT_ANKLE_MIDDLE + i * FACTOR);
         delay(DELAY);
     }
 
+    // rotate to center
     for (i = 0; i < MOVE; ++i) {
         rightHip.writeMicroseconds(RIGHT_HIP_MIDDLE + MOVE - i);
         leftHip.writeMicroseconds(LEFT_HIP_MIDDLE + MOVE - i);
         delay(DELAY);
     }
 
+    // rotate right
     for (i = 0; i < MOVE; ++i) {
         rightHip.writeMicroseconds(RIGHT_HIP_MIDDLE - i);
         leftHip.writeMicroseconds(LEFT_HIP_MIDDLE - i);
@@ -127,6 +132,7 @@ void stepForward() {
         delay(DELAY);
     }
 
+    // lean left
     for (i = 0; i < MOVE; ++i) {
         rightAnkle.writeMicroseconds(RIGHT_ANKLE_MIDDLE - i * FACTOR);
         leftAnkle.writeMicroseconds(LEFT_ANKLE_MIDDLE - i);

@@ -1,49 +1,84 @@
 #include <Servo.h>
 
-#define RIGHT_ANKLE_PIN 5
-#define LEFT_ANKLE_PIN  4
-#define RIGHT_HIP_PIN   3
-#define LEFT_HIP_PIN    2
+#define DELAY               3
 
-#define RIGHT_ANKLE_MIDDLE  1500
-#define LEFT_ANKLE_MIDDLE   1500
-#define RIGHT_HIP_MIDDLE    1300
-#define LEFT_HIP_MIDDLE     1500
-#define MOVE                350
-#define FACTOR              2
-#define DELAY               2
+struct Joint
+{
+    const unsigned int pin;
+    const unsigned int posMin;
+    const unsigned int posMiddle;
+    const unsigned int posMax;
+    const unsigned int distMinToMiddle;
+    const unsigned int distMaxToMiddle;
+    Servo servo;
 
-Servo rightAnkle;
-Servo leftAnkle;
-Servo rightHip;
-Servo leftHip;
+    unsigned int currentPos;
+
+    Joint(
+        const unsigned int pin, 
+        const unsigned int posMin, 
+        const unsigned int posMiddle, 
+        const unsigned int posMax) :
+        pin(pin), 
+        posMin(posMin), 
+        posMiddle(posMiddle), 
+        posMax(posMax),
+        distMinToMiddle(posMiddle-posMin),
+        distMaxToMiddle(posMax-posMiddle),
+        currentPos(0)
+    {
+    }
+
+    void init()
+    {
+        this->servo.attach(this->pin);
+        this->servo.writeMicroseconds(this->posMiddle);
+        this->currentPos = this->posMiddle;
+    }
+
+    void dec(unsigned int steps = 1)
+    {
+        this->currentPos -= steps;
+        this->servo.writeMicroseconds(this->currentPos);
+    }
+
+    void inc(unsigned int steps = 1)
+    {
+        this->currentPos += steps;
+        this->servo.writeMicroseconds(this->currentPos);
+    }
+};
+
+Joint rightAnkle(5, 810, 1510, 1860);
+Joint leftAnkle(4, 1140, 1490, 2190);
+Joint rightHip(3, 950, 1300, 1650);
+Joint leftHip(2, 1150, 1500, 1850);
 
 void stepForward();
 
 void setup() {
-    rightAnkle.attach(RIGHT_ANKLE_PIN);
-    leftAnkle.attach(LEFT_ANKLE_PIN);
-    rightHip.attach(RIGHT_HIP_PIN);
-    leftHip.attach(LEFT_HIP_PIN);
-
-    rightAnkle.writeMicroseconds(RIGHT_ANKLE_MIDDLE);
-    leftAnkle.writeMicroseconds(LEFT_ANKLE_MIDDLE);
-    rightHip.writeMicroseconds(RIGHT_HIP_MIDDLE);
-    leftHip.writeMicroseconds(LEFT_HIP_MIDDLE);
+    rightAnkle.init();
+    leftAnkle.init();
+    rightHip.init();
+    leftHip.init();
 }
 
 bool running = false;
 
-void loop() {
+void loop()
+{
     int i = 0;
+    int j = 0;
 
-    if (!running) {
+    if (!running)
+    {
         delay(5000);
 
-        // lean left
-        for (i = 0; i < MOVE; ++i) {
-            rightAnkle.writeMicroseconds(RIGHT_ANKLE_MIDDLE-i*FACTOR);
-            leftAnkle.writeMicroseconds(LEFT_ANKLE_MIDDLE-i);
+        for (i = 0; i < leftAnkle.distMinToMiddle; ++i)
+        {
+            rightAnkle.dec(2);
+            leftAnkle.dec();
+
             delay(DELAY);
         }
 
@@ -55,50 +90,60 @@ void loop() {
 
 void stepForward() {
     int i = 0;
+    int j = 0;
 
-    // rotate left
-    for (i = 0; i < MOVE; ++i) {
-        rightHip.writeMicroseconds(RIGHT_HIP_MIDDLE + i);
-        leftHip.writeMicroseconds(LEFT_HIP_MIDDLE + i);
-        rightAnkle.writeMicroseconds(RIGHT_ANKLE_MIDDLE - MOVE * FACTOR + i * FACTOR);
-        leftAnkle.writeMicroseconds(LEFT_ANKLE_MIDDLE - MOVE + i);
+    // left step
+    for (i = 0; i < leftAnkle.distMinToMiddle; ++i)
+    {
+        rightAnkle.inc(2);
+        leftAnkle.inc();
+        rightHip.inc();
+        leftHip.inc();
+
         delay(DELAY);
     }
 
     // lean right
-    for (i = 0; i < MOVE; ++i) {
-        rightAnkle.writeMicroseconds(RIGHT_ANKLE_MIDDLE + i);
-        leftAnkle.writeMicroseconds(LEFT_ANKLE_MIDDLE + i * FACTOR);
+    for (i = 0; i < rightAnkle.distMaxToMiddle; ++i)
+    {
+        rightAnkle.inc();
+        leftAnkle.inc(2);
+
         delay(DELAY);
     }
 
-    // rotate to center
-    for (i = 0; i < MOVE; ++i) {
-        rightHip.writeMicroseconds(RIGHT_HIP_MIDDLE + MOVE - i);
-        leftHip.writeMicroseconds(LEFT_HIP_MIDDLE + MOVE - i);
+    // rotate from left to center
+    for (i = 0; i < rightHip.distMaxToMiddle; ++i)
+    {
+        rightHip.dec();
+        leftHip.dec();
+
         delay(DELAY);
     }
 
-    // rotate right
-    for (i = 0; i < MOVE; ++i) {
-        rightHip.writeMicroseconds(RIGHT_HIP_MIDDLE - i);
-        leftHip.writeMicroseconds(LEFT_HIP_MIDDLE - i);
-        rightAnkle.writeMicroseconds(RIGHT_ANKLE_MIDDLE + MOVE - i);
-        leftAnkle.writeMicroseconds(LEFT_ANKLE_MIDDLE + MOVE * FACTOR - i * FACTOR);
+    // right step
+    for (i = 0; i < rightAnkle.distMaxToMiddle; ++i) {
+        rightAnkle.dec();
+        leftAnkle.dec(2);
+        rightHip.dec();
+        leftHip.dec();
+
         delay(DELAY);
     }
 
     // lean left
-    for (i = 0; i < MOVE; ++i) {
-        rightAnkle.writeMicroseconds(RIGHT_ANKLE_MIDDLE - i * FACTOR);
-        leftAnkle.writeMicroseconds(LEFT_ANKLE_MIDDLE - i);
+    for (i = 0; i < leftAnkle.distMinToMiddle; ++i) {
+        rightAnkle.dec(2);
+        leftAnkle.dec();
+
         delay(DELAY);
     }
 
-    // rotate to center
-    for (i = 0; i < MOVE; ++i) {
-        rightHip.writeMicroseconds(RIGHT_HIP_MIDDLE - MOVE + i);
-        leftHip.writeMicroseconds(LEFT_HIP_MIDDLE - MOVE + i);
+    // rotate from right to center
+    for (i = 0; i < rightHip.distMinToMiddle; ++i) {
+        rightHip.inc();
+        leftHip.inc();
+
         delay(DELAY);
     }
 }

@@ -1,21 +1,21 @@
 #include <limits.h>
 #include <Servo.h>
 
-#define RIGHT_ANKLE_POS_MIN     1050
+#define RIGHT_ANKLE_POS_MIN     900
 #define RIGHT_ANKLE_POS_MIDDLE  1510
-#define RIGHT_ANKLE_POS_MAX     1860
+#define RIGHT_ANKLE_POS_MAX     1950
 
-#define LEFT_ANKLE_POS_MIN      1140
+#define LEFT_ANKLE_POS_MIN      1050
 #define LEFT_ANKLE_POS_MIDDLE   1490
-#define LEFT_ANKLE_POS_MAX      2190
+#define LEFT_ANKLE_POS_MAX      2200
 
-#define RIGHT_HIP_POS_MIN       950
+#define RIGHT_HIP_POS_MIN       960
 #define RIGHT_HIP_POS_MIDDLE    1290
 #define RIGHT_HIP_POS_MAX       1600
 
 #define LEFT_HIP_POS_MIN        1100
 #define LEFT_HIP_POS_MIDDLE     1500
-#define LEFT_HIP_POS_MAX        1930
+#define LEFT_HIP_POS_MAX        1870
 
 #define RIGHT_ANKLE_PIN         5
 #define LEFT_ANKLE_PIN          4
@@ -23,9 +23,10 @@
 #define LEFT_HIP_PIN            2
 #define SR04_TRIGGER_PIN        8
 #define SR04_ECHO_PIN           9
+#define RANDOM_SEED_PIN         A0      // Take noise from unconnected analog pin to seed RNG
 
-#define DELAY 2
-#define STOP_DISTANCE           10
+#define DELAY                   1500
+#define STOP_DISTANCE           20
 
 struct Joint
 {
@@ -144,7 +145,7 @@ void moveJoints(const int numMoves, Move* moves)
             joint->setPosition(static_cast<float>(pos));
         }
 
-        delay(DELAY);
+        delayMicroseconds(DELAY);
     }
 }
 
@@ -154,7 +155,6 @@ Joint rightHip(RIGHT_HIP_PIN, RIGHT_HIP_POS_MIN, RIGHT_HIP_POS_MIDDLE, RIGHT_HIP
 Joint leftHip(LEFT_HIP_PIN, LEFT_HIP_POS_MIN, LEFT_HIP_POS_MIDDLE, LEFT_HIP_POS_MAX);
 
 bool started = false;
-bool stop = false;
 
 long getDistance()
 {
@@ -169,6 +169,112 @@ long getDistance()
     duration = pulseIn(SR04_ECHO_PIN, HIGH);
 
     return duration * 0.01716;
+}
+
+void turnLeft()
+{
+    Move leanLeft[] = { 
+        Move(&rightAnkle, Joint::POS_MIDDLE, Joint::POS_MIN), 
+        Move(&leftAnkle, Joint::POS_MIDDLE, Joint::POS_MIN)
+    };
+
+    Move rotateLeftHip[] = {
+        Move(&rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
+        Move(&leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
+        Move(&leftHip, Joint::POS_MIDDLE, Joint::POS_MAX)
+    };
+
+    Move leanRight[] = {
+        Move(&rightAnkle, Joint::POS_MIDDLE, Joint::POS_MAX),
+        Move(&leftAnkle, Joint::POS_MIDDLE, Joint::POS_MAX)
+    };
+
+    Move rotateRightHip[] = {
+        Move(&rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
+        Move(&leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
+        Move(&rightHip, Joint::POS_MIDDLE, Joint::POS_MAX),
+        Move(&leftHip, Joint::POS_MAX, Joint::POS_MIDDLE)
+    };
+
+    Move rotateBothHips[] = {
+        Move(&rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
+        Move(&leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
+        Move(&rightHip, Joint::POS_MAX, Joint::POS_MIDDLE),
+        Move(&leftHip, Joint::POS_MIDDLE, Joint::POS_MAX)
+    };
+
+    Move finishTurn[] = {
+        Move(&rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE), 
+        Move(&leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
+        Move(&leftHip, Joint::POS_MAX, Joint::POS_MIDDLE)
+    };
+
+    moveJoints(2, leanLeft);
+    moveJoints(3, rotateLeftHip);
+    moveJoints(2, leanRight);
+    moveJoints(4, rotateRightHip);
+    moveJoints(2, leanLeft);
+    moveJoints(4, rotateBothHips);
+    moveJoints(2, leanRight);
+    moveJoints(3, finishTurn);
+}
+
+void turnRight()
+{
+    Move leanRight[] = {
+        Move(&rightAnkle, Joint::POS_MIDDLE, Joint::POS_MAX),
+        Move(&leftAnkle, Joint::POS_MIDDLE, Joint::POS_MAX)
+    };
+
+    Move rotateRightHip[] = {
+        Move(&rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
+        Move(&leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
+        Move(&rightHip, Joint::POS_MIDDLE, Joint::POS_MIN)
+    };
+
+    Move leanLeft[] = {
+        Move(&rightAnkle, Joint::POS_MIDDLE, Joint::POS_MIN),
+        Move(&leftAnkle, Joint::POS_MIDDLE, Joint::POS_MIN)
+    };
+
+    Move rotateLeftHip[] = {
+        Move(&rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
+        Move(&leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
+        Move(&rightHip, Joint::POS_MIN, Joint::POS_MIDDLE),
+        Move(&leftHip, Joint::POS_MIDDLE, Joint::POS_MIN)
+    };
+
+    Move rotateBothHips[] = {
+        Move(&rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
+        Move(&leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
+        Move(&rightHip, Joint::POS_MIDDLE, Joint::POS_MIN),
+        Move(&leftHip, Joint::POS_MIN, Joint::POS_MIDDLE)
+    };
+
+    Move finishTurn[] = {
+        Move(&rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
+        Move(&leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
+        Move(&rightHip, Joint::POS_MIN, Joint::POS_MIDDLE)
+    };
+    
+    moveJoints(2, leanRight);
+    moveJoints(3, rotateRightHip);
+    moveJoints(2, leanLeft);
+    moveJoints(4, rotateLeftHip);
+    moveJoints(2, leanRight);
+    moveJoints(4, rotateBothHips);
+    moveJoints(2, leanLeft);
+    moveJoints(3, finishTurn);
+}
+
+void startStepFoward()
+{
+    Move startLeanLeft[] = { 
+        Move(&rightAnkle, Joint::POS_MIDDLE, Joint::POS_MIN), 
+        Move(&leftAnkle, Joint::POS_MIDDLE, Joint::POS_MIN)
+    };
+    
+    moveJoints(2, startLeanLeft);
 }
 
 void stepForward() {
@@ -218,8 +324,18 @@ void stepForward() {
         };
 
         moveJoints(2, stepDown);
+
+        if (random(2))
+        {
+            turnLeft();
+        }
+        else
+        {
+            turnRight();
+        }
+
+        startStepFoward();
         
-        stop = true;
         return;
     }
     
@@ -236,14 +352,28 @@ void stepForward() {
 
         moveJoints(2, stepDown);
 
-        stop = true;
+        if (random(2))
+        {
+            turnLeft();
+        }
+        else
+        {
+            turnRight();
+        }
+
+        startStepFoward();
+
         return;
     }
 }
 
-void setup() {
+
+void setup()
+{
     pinMode(SR04_TRIGGER_PIN, OUTPUT);
     pinMode(SR04_ECHO_PIN, INPUT);
+
+    randomSeed(analogRead(RANDOM_SEED_PIN));
     
     rightAnkle.init();
     leftAnkle.init();
@@ -257,21 +387,11 @@ void loop()
 
     if (!started)
     {
-        Move startLeanLeft[] = { 
-            Move(&rightAnkle, Joint::POS_MIDDLE, Joint::POS_MIN), 
-            Move(&leftAnkle, Joint::POS_MIDDLE, Joint::POS_MIN)
-        };
-
         delay(5000);
-
-        moveJoints(2, startLeanLeft);
-
+        startStepFoward();
         started = true;
     }
 
-    if (!stop)
-    {
-        stepForward();
-    }
+    stepForward();
 }
 

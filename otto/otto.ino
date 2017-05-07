@@ -1,11 +1,6 @@
 #include <limits.h>
 #include <Servo.h>
 
-#define RIGHT_ANKLE_PIN         5
-#define LEFT_ANKLE_PIN          4
-#define RIGHT_HIP_PIN           3
-#define LEFT_HIP_PIN            2
-
 #define RIGHT_ANKLE_POS_MIN     1050
 #define RIGHT_ANKLE_POS_MIDDLE  1510
 #define RIGHT_ANKLE_POS_MAX     1860
@@ -22,7 +17,15 @@
 #define LEFT_HIP_POS_MIDDLE     1500
 #define LEFT_HIP_POS_MAX        1930
 
+#define RIGHT_ANKLE_PIN         5
+#define LEFT_ANKLE_PIN          4
+#define RIGHT_HIP_PIN           3
+#define LEFT_HIP_PIN            2
+#define SR04_TRIGGER_PIN        8
+#define SR04_ECHO_PIN           9
+
 #define DELAY 2
+#define STOP_DISTANCE           10
 
 struct Joint
 {
@@ -150,6 +153,24 @@ Joint leftAnkle(LEFT_ANKLE_PIN, LEFT_ANKLE_POS_MIN, LEFT_ANKLE_POS_MIDDLE, LEFT_
 Joint rightHip(RIGHT_HIP_PIN, RIGHT_HIP_POS_MIN, RIGHT_HIP_POS_MIDDLE, RIGHT_HIP_POS_MAX);
 Joint leftHip(LEFT_HIP_PIN, LEFT_HIP_POS_MIN, LEFT_HIP_POS_MIDDLE, LEFT_HIP_POS_MAX);
 
+bool started = false;
+bool stop = false;
+
+long getDistance()
+{
+    long duration = 0;
+    
+    digitalWrite(SR04_TRIGGER_PIN, LOW);
+    delayMicroseconds(5);
+    digitalWrite(SR04_TRIGGER_PIN, HIGH);
+    delayMicroseconds(10);
+    digitalWrite(SR04_TRIGGER_PIN, LOW);
+
+    duration = pulseIn(SR04_ECHO_PIN, HIGH);
+
+    return duration * 0.01716;
+}
+
 void stepForward() {
     Move stepLeft[] = {
         Move(&rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
@@ -188,19 +209,47 @@ void stepForward() {
     moveJoints(4, stepLeft);
     moveJoints(2, leanRight);
     moveJoints(2, rotateFromLeftToCenter);
+
+    if (getDistance() <= STOP_DISTANCE)
+    {
+        Move stepDown[] = {
+            Move(&rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
+            Move(&leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
+        };
+
+        moveJoints(2, stepDown);
+        
+        stop = true;
+        return;
+    }
+    
     moveJoints(4, stepRight);
     moveJoints(2, leanLeft);
     moveJoints(2, rotateFromRightToCenter);
+
+    if (getDistance() <= STOP_DISTANCE)
+    {
+        Move stepDown[] = {
+            Move(&rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
+            Move(&leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
+        };
+
+        moveJoints(2, stepDown);
+
+        stop = true;
+        return;
+    }
 }
 
 void setup() {
+    pinMode(SR04_TRIGGER_PIN, OUTPUT);
+    pinMode(SR04_ECHO_PIN, INPUT);
+    
     rightAnkle.init();
     leftAnkle.init();
     rightHip.init();
     leftHip.init();
 }
-
-bool started = false;
 
 void loop()
 {
@@ -220,6 +269,9 @@ void loop()
         started = true;
     }
 
-    stepForward();
+    if (!stop)
+    {
+        stepForward();
+    }
 }
 

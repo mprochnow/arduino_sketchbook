@@ -1,6 +1,27 @@
 #include <limits.h>
 #include <Servo.h>
 
+#define RIGHT_ANKLE_PIN         5
+#define LEFT_ANKLE_PIN          4
+#define RIGHT_HIP_PIN           3
+#define LEFT_HIP_PIN            2
+
+#define RIGHT_ANKLE_POS_MIN     1050
+#define RIGHT_ANKLE_POS_MIDDLE  1510
+#define RIGHT_ANKLE_POS_MAX     1860
+
+#define LEFT_ANKLE_POS_MIN      1140
+#define LEFT_ANKLE_POS_MIDDLE   1490
+#define LEFT_ANKLE_POS_MAX      2190
+
+#define RIGHT_HIP_POS_MIN       950
+#define RIGHT_HIP_POS_MIDDLE    1290
+#define RIGHT_HIP_POS_MAX       1600
+
+#define LEFT_HIP_POS_MIN        1100
+#define LEFT_HIP_POS_MIDDLE     1500
+#define LEFT_HIP_POS_MAX        1930
+
 #define DELAY 2
 
 struct Joint
@@ -124,10 +145,10 @@ void moveJoints(const int numMoves, Move* moves)
     }
 }
 
-Joint rightAnkle(5, 950, 1510, 1860);
-Joint leftAnkle(4, 1140, 1490, 2190);
-Joint rightHip(3, 950, 1290, 1650);
-Joint leftHip(2, 1100, 1500, 1930);
+Joint rightAnkle(RIGHT_ANKLE_PIN, RIGHT_ANKLE_POS_MIN, RIGHT_ANKLE_POS_MIDDLE, RIGHT_ANKLE_POS_MAX);
+Joint leftAnkle(LEFT_ANKLE_PIN, LEFT_ANKLE_POS_MIN, LEFT_ANKLE_POS_MIDDLE, LEFT_ANKLE_POS_MAX);
+Joint rightHip(RIGHT_HIP_PIN, RIGHT_HIP_POS_MIN, RIGHT_HIP_POS_MIDDLE, RIGHT_HIP_POS_MAX);
+Joint leftHip(LEFT_HIP_PIN, LEFT_HIP_POS_MIN, LEFT_HIP_POS_MIDDLE, LEFT_HIP_POS_MAX);
 
 void stepForward() {
     Move stepLeft[] = {

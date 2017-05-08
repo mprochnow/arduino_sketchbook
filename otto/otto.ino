@@ -166,7 +166,7 @@ long getDistance()
     delayMicroseconds(10);
     digitalWrite(SR04_TRIGGER_PIN, LOW);
 
-    duration = pulseIn(SR04_ECHO_PIN, HIGH);
+    duration = pulseIn(SR04_ECHO_PIN, HIGH, 3000);
 
     return duration * 0.01716;
 }
@@ -278,6 +278,8 @@ void startStepFoward()
 }
 
 void stepForward() {
+    int distance = 0;
+    
     Move stepLeft[] = {
         Move(&rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
         Move(&leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
@@ -316,7 +318,9 @@ void stepForward() {
     moveJoints(2, leanRight);
     moveJoints(2, rotateFromLeftToCenter);
 
-    if (getDistance() <= STOP_DISTANCE)
+    distance = getDistance();
+
+    if (distance > 0 && distance <= STOP_DISTANCE)
     {
         Move stepDown[] = {
             Move(&rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
@@ -343,7 +347,9 @@ void stepForward() {
     moveJoints(2, leanLeft);
     moveJoints(2, rotateFromRightToCenter);
 
-    if (getDistance() <= STOP_DISTANCE)
+    distance = getDistance();
+
+    if (distance > 0 && distance <= STOP_DISTANCE)
     {
         Move stepDown[] = {
             Move(&rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),

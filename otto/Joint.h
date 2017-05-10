@@ -2,6 +2,14 @@
 
 #include <Servo.h>
 
+struct JointConfig
+{
+    const int pin;
+    const int posMin;
+    const int posMiddle;
+    const int posMax;
+};
+
 class Joint
 {
 public:
@@ -12,12 +20,10 @@ public:
         POS_MAX
     };
     
-    Joint(const int pin, const int posMin, const int posMiddle, const int posMax);
+    Joint(const JointConfig& cfg);
 
-    void init();
-
+    void setup();
     const int getValue(Joint::Position pos) const;
-    
     void setPosition(const int pos) const;
 
 private:

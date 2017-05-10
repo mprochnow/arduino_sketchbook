@@ -1,11 +1,11 @@
 #include "Joint.h"
 
-Joint::Joint(const int pin, const int posMin, const int posMiddle, const int posMax) :
-    pin(pin), posMin(posMin), posMiddle(posMiddle), posMax(posMax)
+Joint::Joint(const JointConfig& cfg) :
+    pin(cfg.pin), posMin(cfg.posMin), posMiddle(cfg.posMiddle), posMax(cfg.posMax)
 {
 }
 
-void Joint::init()
+void Joint::setup()
 {
     this->servo.attach(this->pin);
     this->servo.writeMicroseconds(this->posMiddle);

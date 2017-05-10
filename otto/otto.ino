@@ -1,5 +1,4 @@
-#include <limits.h>
-#include "Joint.h"
+#include "Robot.h"
 
 #define RIGHT_ANKLE_POS_LEFT    900
 #define RIGHT_ANKLE_POS_MIDDLE  1510
@@ -29,84 +28,6 @@
 #define STOP_DISTANCE           20
 
 
-struct Move
-{
-    Joint* joint;
-    Joint::Position from;
-    Joint::Position to;
-
-    int direction = 0;
-    int distance = 0;
-    float increment = 0.0;
-
-    Move(Joint* joint, Joint::Position from, Joint::Position to):
-        joint(joint), from(from), to(to)
-    {}
-};
-
-void moveJoints(const int numMoves, Move* moves)
-{
-    int i = 0, j = 0;
-    int minDistance = INT_MAX;
-
-    for (i = 0; i < numMoves; ++i)
-    {
-        Move* move = &moves[i];
-        const Joint* joint = move->joint;
-        const int from = joint->getValue(move->from);
-        const int to = joint->getValue(move->to);
-
-        // determine move direction and distance
-        if (from > to)
-        {
-            move->direction = -1;
-            move->distance = from - to;
-        }
-        else
-        {
-            move->direction = 1;
-            move->distance = to - from;
-        }
-
-        // determine minimum move distance of all joints
-        if (move->distance < minDistance)
-        {
-            minDistance = move->distance;
-        }
-    }
-
-    // determine increment for each position update
-    for (i = 0; i < numMoves; ++i)
-    {
-        Move* move = &moves[i];
-        const Joint* joint = move->joint;
-
-        move->increment = static_cast<float>(move->distance) / static_cast<float>(minDistance);
-    }
-
-    // move servos
-    for (i = 0; i < minDistance; ++i)
-    {
-        for (j = 0; j < numMoves; ++j)
-        {
-            Move* move = &moves[j];
-            const Joint* joint = move->joint;
-            int pos = joint->getValue(move->from) + move->direction * i * move->increment;
-
-            joint->setPosition(static_cast<float>(pos));
-        }
-
-        delayMicroseconds(DELAY);
-    }
-}
-
-Joint rightAnkle(RIGHT_ANKLE_PIN, RIGHT_ANKLE_POS_LEFT, RIGHT_ANKLE_POS_MIDDLE, RIGHT_ANKLE_POS_RIGHT);
-Joint leftAnkle(LEFT_ANKLE_PIN, LEFT_ANKLE_POS_LEFT, LEFT_ANKLE_POS_MIDDLE, LEFT_ANKLE_POS_RIGHT);
-Joint rightHip(RIGHT_HIP_PIN, RIGHT_HIP_POS_MIN, RIGHT_HIP_POS_MIDDLE, RIGHT_HIP_POS_MAX);
-Joint leftHip(LEFT_HIP_PIN, LEFT_HIP_POS_MIN, LEFT_HIP_POS_MIDDLE, LEFT_HIP_POS_MAX);
-
-bool started = false;
-
 long getDistance()
 {
     long duration = 0;
@@ -122,208 +43,17 @@ long getDistance()
     return duration * 0.01716;
 }
 
-void turnLeft()
-{
-    Move leanLeft[] = { 
-        Move(&rightAnkle, Joint::POS_MIDDLE, Joint::POS_MIN), 
-        Move(&leftAnkle, Joint::POS_MIDDLE, Joint::POS_MIN)
-    };
+const RobotConfig cfg = {
+    {RIGHT_ANKLE_PIN, RIGHT_ANKLE_POS_LEFT, RIGHT_ANKLE_POS_MIDDLE, RIGHT_ANKLE_POS_RIGHT},
+    {LEFT_ANKLE_PIN, LEFT_ANKLE_POS_LEFT, LEFT_ANKLE_POS_MIDDLE, LEFT_ANKLE_POS_RIGHT},
+    {RIGHT_HIP_PIN, RIGHT_HIP_POS_MIN, RIGHT_HIP_POS_MIDDLE, RIGHT_HIP_POS_MAX},
+    {LEFT_HIP_PIN, LEFT_HIP_POS_MIN, LEFT_HIP_POS_MIDDLE, LEFT_HIP_POS_MAX},
+    DELAY,
+    STOP_DISTANCE
+};
 
-    Move rotateLeftHip[] = {
-        Move(&rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&leftHip, Joint::POS_MIDDLE, Joint::POS_MAX)
-    };
-
-    Move leanRight[] = {
-        Move(&rightAnkle, Joint::POS_MIDDLE, Joint::POS_MAX),
-        Move(&leftAnkle, Joint::POS_MIDDLE, Joint::POS_MAX)
-    };
-
-    Move rotateRightHip[] = {
-        Move(&rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&rightHip, Joint::POS_MIDDLE, Joint::POS_MAX),
-        Move(&leftHip, Joint::POS_MAX, Joint::POS_MIDDLE)
-    };
-
-    Move rotateBothHips[] = {
-        Move(&rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&rightHip, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&leftHip, Joint::POS_MIDDLE, Joint::POS_MAX)
-    };
-
-    Move finishTurn[] = {
-        Move(&rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE), 
-        Move(&leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&leftHip, Joint::POS_MAX, Joint::POS_MIDDLE)
-    };
-
-    moveJoints(2, leanLeft);
-    moveJoints(3, rotateLeftHip);
-    moveJoints(2, leanRight);
-    moveJoints(4, rotateRightHip);
-    moveJoints(2, leanLeft);
-    moveJoints(4, rotateBothHips);
-    moveJoints(2, leanRight);
-    moveJoints(3, finishTurn);
-}
-
-void turnRight()
-{
-    Move leanRight[] = {
-        Move(&rightAnkle, Joint::POS_MIDDLE, Joint::POS_MAX),
-        Move(&leftAnkle, Joint::POS_MIDDLE, Joint::POS_MAX)
-    };
-
-    Move rotateRightHip[] = {
-        Move(&rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&rightHip, Joint::POS_MIDDLE, Joint::POS_MIN)
-    };
-
-    Move leanLeft[] = {
-        Move(&rightAnkle, Joint::POS_MIDDLE, Joint::POS_MIN),
-        Move(&leftAnkle, Joint::POS_MIDDLE, Joint::POS_MIN)
-    };
-
-    Move rotateLeftHip[] = {
-        Move(&rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&rightHip, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&leftHip, Joint::POS_MIDDLE, Joint::POS_MIN)
-    };
-
-    Move rotateBothHips[] = {
-        Move(&rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&rightHip, Joint::POS_MIDDLE, Joint::POS_MIN),
-        Move(&leftHip, Joint::POS_MIN, Joint::POS_MIDDLE)
-    };
-
-    Move finishTurn[] = {
-        Move(&rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&rightHip, Joint::POS_MIN, Joint::POS_MIDDLE)
-    };
-    
-    moveJoints(2, leanRight);
-    moveJoints(3, rotateRightHip);
-    moveJoints(2, leanLeft);
-    moveJoints(4, rotateLeftHip);
-    moveJoints(2, leanRight);
-    moveJoints(4, rotateBothHips);
-    moveJoints(2, leanLeft);
-    moveJoints(3, finishTurn);
-}
-
-void startStepFoward()
-{
-    Move startLeanLeft[] = { 
-        Move(&rightAnkle, Joint::POS_MIDDLE, Joint::POS_MIN), 
-        Move(&leftAnkle, Joint::POS_MIDDLE, Joint::POS_MIN)
-    };
-    
-    moveJoints(2, startLeanLeft);
-}
-
-void stepForward() {
-    int distance = 0;
-    
-    Move stepLeft[] = {
-        Move(&rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&rightHip, Joint::POS_MIDDLE, Joint::POS_MAX),
-        Move(&leftHip, Joint::POS_MIDDLE, Joint::POS_MAX)
-    };
-
-    Move leanRight[] = {
-        Move(&rightAnkle, Joint::POS_MIDDLE, Joint::POS_MAX),
-        Move(&leftAnkle, Joint::POS_MIDDLE, Joint::POS_MAX)
-    };
-
-    Move rotateFromLeftToCenter[] = {
-        Move(&rightHip, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&leftHip, Joint::POS_MAX, Joint::POS_MIDDLE)
-    };
-
-    Move stepRight[] = {
-        Move(&rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&rightHip, Joint::POS_MIDDLE, Joint::POS_MIN),
-        Move(&leftHip, Joint::POS_MIDDLE, Joint::POS_MIN)
-    };
-
-    Move leanLeft[] = {
-        Move(&rightAnkle, Joint::POS_MIDDLE, Joint::POS_MIN),
-        Move(&leftAnkle, Joint::POS_MIDDLE, Joint::POS_MIN)
-    };
-
-    Move rotateFromRightToCenter[] = {
-        Move(&rightHip, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&leftHip, Joint::POS_MIN, Joint::POS_MIDDLE)
-    };
-
-    moveJoints(4, stepLeft);
-    moveJoints(2, leanRight);
-    moveJoints(2, rotateFromLeftToCenter);
-
-    distance = getDistance();
-
-    if (distance > 0 && distance <= STOP_DISTANCE)
-    {
-        Move stepDown[] = {
-            Move(&rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-            Move(&leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        };
-
-        moveJoints(2, stepDown);
-
-        if (random(2))
-        {
-            turnLeft();
-        }
-        else
-        {
-            turnRight();
-        }
-
-        startStepFoward();
-        
-        return;
-    }
-    
-    moveJoints(4, stepRight);
-    moveJoints(2, leanLeft);
-    moveJoints(2, rotateFromRightToCenter);
-
-    distance = getDistance();
-
-    if (distance > 0 && distance <= STOP_DISTANCE)
-    {
-        Move stepDown[] = {
-            Move(&rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-            Move(&leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        };
-
-        moveJoints(2, stepDown);
-
-        if (random(2))
-        {
-            turnLeft();
-        }
-        else
-        {
-            turnRight();
-        }
-
-        startStepFoward();
-
-        return;
-    }
-}
-
+Robot robot(cfg);
+bool started = false;
 
 void setup()
 {
@@ -332,23 +62,18 @@ void setup()
 
     randomSeed(analogRead(RANDOM_SEED_PIN));
     
-    rightAnkle.init();
-    leftAnkle.init();
-    rightHip.init();
-    leftHip.init();
+    robot.setup();
 }
 
 void loop()
 {
-    int i = 0;
-
     if (!started)
     {
         delay(5000);
-        startStepFoward();
+        robot.startStepFoward();
         started = true;
     }
 
-    stepForward();
+    robot.stepForward();
 }
 

@@ -1,5 +1,5 @@
 #include <limits.h>
-#include <Servo.h>
+#include "Joint.h"
 
 #define RIGHT_ANKLE_POS_LEFT    900
 #define RIGHT_ANKLE_POS_MIDDLE  1510
@@ -11,7 +11,7 @@
 
 #define RIGHT_HIP_POS_MIN       960
 #define RIGHT_HIP_POS_MIDDLE    1290
-#define RIGHT_HIP_POS_MAX       1620
+#define RIGHT_HIP_POS_MAX       1600
 
 #define LEFT_HIP_POS_MIN        1100
 #define LEFT_HIP_POS_MIDDLE     1500
@@ -28,55 +28,6 @@
 #define DELAY                   1500
 #define STOP_DISTANCE           20
 
-struct Joint
-{
-    enum Position
-    {
-        POS_MIN,
-        POS_MIDDLE,
-        POS_MAX
-    };
-    
-    const int pin;
-    const int posMin;
-    const int posMiddle;
-    const int posMax;
-    Servo servo;
-
-    Joint(
-        const int pin, 
-        const int posMin, 
-        const int posMiddle, 
-        const int posMax) :
-        pin(pin), 
-        posMin(posMin), 
-        posMiddle(posMiddle), 
-        posMax(posMax)
-    {
-    }
-
-    void init()
-    {
-        this->servo.attach(this->pin);
-        this->servo.writeMicroseconds(this->posMiddle);
-    }
-
-    const int getValue(Joint::Position pos) const
-    {
-        switch (pos)
-        {
-            case POS_MIN: return this->posMin;
-            case POS_MIDDLE: return this->posMiddle;
-            case POS_MAX: return this->posMax;
-            default: return 0;
-        }
-    }
-
-    void setPosition(const int pos) const
-    {
-        this->servo.writeMicroseconds(pos);
-    }
-};
 
 struct Move
 {

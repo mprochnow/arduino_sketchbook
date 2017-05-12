@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Joint.h"
+#include "DistanceSensor.h"
 
 struct RobotConfig
 {
@@ -10,6 +11,7 @@ struct RobotConfig
     const JointConfig leftHip;
     const unsigned long delay; 
     const unsigned int stopDistance;
+    const DistanceSensorConfig distanceSensor;
 };
 
 class Robot
@@ -45,6 +47,7 @@ private:
     const Joint leftHip;
     const unsigned long delay;
     const unsigned int stopDistance;
+    const DistanceSensor distanceSensor;
 };
 
 

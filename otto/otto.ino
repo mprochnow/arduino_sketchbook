@@ -28,28 +28,14 @@
 #define STOP_DISTANCE           20
 
 
-long getDistance()
-{
-    long duration = 0;
-    
-    digitalWrite(SR04_TRIGGER_PIN, LOW);
-    delayMicroseconds(5);
-    digitalWrite(SR04_TRIGGER_PIN, HIGH);
-    delayMicroseconds(10);
-    digitalWrite(SR04_TRIGGER_PIN, LOW);
-
-    duration = pulseIn(SR04_ECHO_PIN, HIGH, 3000);
-
-    return duration * 0.01716;
-}
-
 const RobotConfig cfg = {
     {RIGHT_ANKLE_PIN, RIGHT_ANKLE_POS_LEFT, RIGHT_ANKLE_POS_MIDDLE, RIGHT_ANKLE_POS_RIGHT},
     {LEFT_ANKLE_PIN, LEFT_ANKLE_POS_LEFT, LEFT_ANKLE_POS_MIDDLE, LEFT_ANKLE_POS_RIGHT},
     {RIGHT_HIP_PIN, RIGHT_HIP_POS_MIN, RIGHT_HIP_POS_MIDDLE, RIGHT_HIP_POS_MAX},
     {LEFT_HIP_PIN, LEFT_HIP_POS_MIN, LEFT_HIP_POS_MIDDLE, LEFT_HIP_POS_MAX},
     DELAY,
-    STOP_DISTANCE
+    STOP_DISTANCE,
+    {SR04_TRIGGER_PIN, SR04_ECHO_PIN}
 };
 
 Robot robot(cfg);
@@ -57,9 +43,6 @@ bool started = false;
 
 void setup()
 {
-    pinMode(SR04_TRIGGER_PIN, OUTPUT);
-    pinMode(SR04_ECHO_PIN, INPUT);
-
     randomSeed(analogRead(RANDOM_SEED_PIN));
     
     robot.setup();

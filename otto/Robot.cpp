@@ -2,15 +2,13 @@
 #include <limits.h>
 #include "Robot.h"
 
-extern long getDistance();
-
 Robot::Move::Move(Joint* joint, Joint::Position from, Joint::Position to):
     joint(joint), from(from), to(to)
 {}
 
 Robot::Robot(const RobotConfig& cfg):
     rightAnkle(cfg.rightAnkle), leftAnkle(cfg.leftAnkle), rightHip(cfg.rightHip), leftHip(cfg.leftHip),
-    delay(cfg.delay), stopDistance(cfg.stopDistance)
+    delay(cfg.delay), stopDistance(cfg.stopDistance), distanceSensor(cfg.distanceSensor)
 {
 }
 
@@ -20,6 +18,7 @@ void Robot::setup()
     this->leftAnkle.setup();
     this->rightHip.setup();
     this->leftHip.setup();
+    this->distanceSensor.setup();
 }
 
 void Robot::startStepFoward()
@@ -74,7 +73,7 @@ void Robot::stepForward()
     this->moveJoints(2, leanRight);
     this->moveJoints(2, rotateFromLeftToCenter);
 
-    distance = getDistance();
+    distance = this->distanceSensor.getDistance();
 
     if (distance > 0 && distance <= this->stopDistance)
     {
@@ -103,7 +102,7 @@ void Robot::stepForward()
     this->moveJoints(2, leanLeft);
     this->moveJoints(2, rotateFromRightToCenter);
 
-    distance = getDistance();
+    distance = this->distanceSensor.getDistance();
 
     if (distance > 0 && distance <= this->stopDistance)
     {

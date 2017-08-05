@@ -39,7 +39,13 @@ public:
     void turnRight();
     
 private:
-    void moveJoints(const int numMoves, Move* moves);
+    template<typename T, size_t N>
+    void moveJoints(T (&moves)[N])
+    {
+        this->moveJointsImpl(N, moves);
+    }
+
+    void moveJointsImpl(const int numMoves, Move* moves);
 
     const Joint rightAnkle;
     const Joint leftAnkle;

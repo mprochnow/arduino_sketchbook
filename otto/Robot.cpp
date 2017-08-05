@@ -28,7 +28,7 @@ void Robot::startStepFoward()
         Move(&this->leftAnkle, Joint::POS_MIDDLE, Joint::POS_MIN)
     };
     
-    this->moveJoints(2, startLeanLeft);
+    this->moveJoints(startLeanLeft);
 }
 
 void Robot::stepForward()
@@ -69,9 +69,9 @@ void Robot::stepForward()
         Move(&this->leftHip, Joint::POS_MIN, Joint::POS_MIDDLE)
     };
 
-    this->moveJoints(4, stepLeft);
-    this->moveJoints(2, leanRight);
-    this->moveJoints(2, rotateFromLeftToCenter);
+    this->moveJoints(stepLeft);
+    this->moveJoints(leanRight);
+    this->moveJoints(rotateFromLeftToCenter);
 
     distance = this->distanceSensor.getDistance();
 
@@ -82,7 +82,7 @@ void Robot::stepForward()
             Move(&this->leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
         };
 
-        this->moveJoints(2, stepDown);
+        this->moveJoints(stepDown);
 
         if (random(2))
         {
@@ -98,9 +98,9 @@ void Robot::stepForward()
         return;
     }
     
-    this->moveJoints(4, stepRight);
-    this->moveJoints(2, leanLeft);
-    this->moveJoints(2, rotateFromRightToCenter);
+    this->moveJoints(stepRight);
+    this->moveJoints(leanLeft);
+    this->moveJoints(rotateFromRightToCenter);
 
     distance = this->distanceSensor.getDistance();
 
@@ -111,7 +111,7 @@ void Robot::stepForward()
             Move(&this->leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
         };
 
-        this->moveJoints(2, stepDown);
+        this->moveJoints(stepDown);
 
         if (random(2))
         {
@@ -166,14 +166,14 @@ void Robot::turnLeft()
         Move(&this->leftHip, Joint::POS_MAX, Joint::POS_MIDDLE)
     };
 
-    this->moveJoints(2, leanLeft);
-    this->moveJoints(3, rotateLeftHip);
-    this->moveJoints(2, leanRight);
-    this->moveJoints(4, rotateRightHip);
-    this->moveJoints(2, leanLeft);
-    this->moveJoints(4, rotateBothHips);
-    this->moveJoints(2, leanRight);
-    this->moveJoints(3, finishTurn);
+    this->moveJoints(leanLeft);
+    this->moveJoints(rotateLeftHip);
+    this->moveJoints(leanRight);
+    this->moveJoints(rotateRightHip);
+    this->moveJoints(leanLeft);
+    this->moveJoints(rotateBothHips);
+    this->moveJoints(leanRight);
+    this->moveJoints(finishTurn);
 }
 
 void Robot::turnRight()
@@ -214,17 +214,17 @@ void Robot::turnRight()
         Move(&this->rightHip, Joint::POS_MIN, Joint::POS_MIDDLE)
     };
     
-    this->moveJoints(2, leanRight);
-    this->moveJoints(3, rotateRightHip);
-    this->moveJoints(2, leanLeft);
-    this->moveJoints(4, rotateLeftHip);
-    this->moveJoints(2, leanRight);
-    this->moveJoints(4, rotateBothHips);
-    this->moveJoints(2, leanLeft);
-    this->moveJoints(3, finishTurn);
+    this->moveJoints(leanRight);
+    this->moveJoints(rotateRightHip);
+    this->moveJoints(leanLeft);
+    this->moveJoints(rotateLeftHip);
+    this->moveJoints(leanRight);
+    this->moveJoints(rotateBothHips);
+    this->moveJoints(leanLeft);
+    this->moveJoints(finishTurn);
 }
 
-void Robot::moveJoints(const int numMoves, Move* moves)
+void Robot::moveJointsImpl(const int numMoves, Move* moves)
 {
     int i = 0, j = 0;
     int minDistance = INT_MAX;

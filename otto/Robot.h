@@ -39,13 +39,13 @@ public:
     void turnRight();
     
 private:
-    template<typename T, size_t N>
-    void moveJoints(T (&moves)[N])
+    template<typename T, size_t n>
+    void moveJoints(T* (&moves)[n])
     {
-        this->moveJointsImpl(N, moves);
+        this->moveJointsImpl(n, moves);
     }
 
-    void moveJointsImpl(const int numMoves, Move* moves);
+    void moveJointsImpl(const int numMoves, Move** moves);
 
     const Joint rightAnkle;
     const Joint leftAnkle;
@@ -54,6 +54,26 @@ private:
     const unsigned long delay;
     const unsigned int stopDistance;
     const DistanceSensor distanceSensor;
+
+    Move rightAnkleMiddleToMin;
+    Move rightAnkleMinToMiddle;
+    Move rightAnkleMiddleToMax;
+    Move rightAnkleMaxToMiddle;
+
+    Move leftAnkleMiddleToMin;
+    Move leftAnkleMinToMiddle;
+    Move leftAnkleMiddleToMax;
+    Move leftAnkleMaxToMiddle;
+
+    Move rightHipMiddleToMin;
+    Move rightHipMinToMiddle;
+    Move rightHipMiddleToMax;
+    Move rightHipMaxToMiddle;
+
+    Move leftHipMiddleToMin;
+    Move leftHipMinToMiddle;
+    Move leftHipMiddleToMax;
+    Move leftHipMaxToMiddle;
 };
 
 

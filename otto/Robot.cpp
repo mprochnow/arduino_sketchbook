@@ -8,7 +8,27 @@ Robot::Move::Move(Joint* joint, Joint::Position from, Joint::Position to):
 
 Robot::Robot(const RobotConfig& cfg):
     rightAnkle(cfg.rightAnkle), leftAnkle(cfg.leftAnkle), rightHip(cfg.rightHip), leftHip(cfg.leftHip),
-    delay(cfg.delay), stopDistance(cfg.stopDistance), distanceSensor(cfg.distanceSensor)
+    delay(cfg.delay), stopDistance(cfg.stopDistance), distanceSensor(cfg.distanceSensor),
+    
+    rightAnkleMiddleToMin(&this->rightAnkle, Joint::POS_MIDDLE, Joint::POS_MIN),
+    rightAnkleMinToMiddle(&this->rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
+    rightAnkleMiddleToMax(&this->rightAnkle, Joint::POS_MIDDLE, Joint::POS_MAX),
+    rightAnkleMaxToMiddle(&this->rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
+    
+    leftAnkleMiddleToMin(&this->leftAnkle, Joint::POS_MIDDLE, Joint::POS_MIN),
+    leftAnkleMinToMiddle(&this->leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
+    leftAnkleMiddleToMax(&this->leftAnkle, Joint::POS_MIDDLE, Joint::POS_MAX),
+    leftAnkleMaxToMiddle(&this->leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
+    
+    rightHipMiddleToMin(&this->rightHip, Joint::POS_MIDDLE, Joint::POS_MIN),
+    rightHipMinToMiddle(&this->rightHip, Joint::POS_MIN, Joint::POS_MIDDLE),
+    rightHipMiddleToMax(&this->rightHip, Joint::POS_MIDDLE, Joint::POS_MAX),
+    rightHipMaxToMiddle(&this->rightHip, Joint::POS_MAX, Joint::POS_MIDDLE),
+    
+    leftHipMiddleToMin(&this->leftHip, Joint::POS_MIDDLE, Joint::POS_MIN),
+    leftHipMinToMiddle(&this->leftHip, Joint::POS_MIN, Joint::POS_MIDDLE),
+    leftHipMiddleToMax(&this->leftHip, Joint::POS_MIDDLE, Joint::POS_MAX),
+    leftHipMaxToMiddle(&this->leftHip, Joint::POS_MAX, Joint::POS_MIDDLE)
 {
 }
 
@@ -23,9 +43,9 @@ void Robot::setup()
 
 void Robot::startStepFoward()
 {
-    Move startLeanLeft[] = { 
-        Move(&this->rightAnkle, Joint::POS_MIDDLE, Joint::POS_MIN), 
-        Move(&this->leftAnkle, Joint::POS_MIDDLE, Joint::POS_MIN)
+    Move *startLeanLeft[] = { 
+        &this->rightAnkleMiddleToMin,
+        &this->leftAnkleMiddleToMin
     };
     
     this->moveJoints(startLeanLeft);
@@ -35,38 +55,38 @@ void Robot::stepForward()
 {
     int distance = 0;
     
-    Move stepLeft[] = {
-        Move(&this->rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&this->leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&this->rightHip, Joint::POS_MIDDLE, Joint::POS_MAX),
-        Move(&this->leftHip, Joint::POS_MIDDLE, Joint::POS_MAX)
+    Move *stepLeft[] = {
+        &this->rightAnkleMinToMiddle,
+        &this->leftAnkleMinToMiddle,
+        &this->rightHipMiddleToMax,
+        &this->leftHipMiddleToMax
     };
 
-    Move leanRight[] = {
-        Move(&this->rightAnkle, Joint::POS_MIDDLE, Joint::POS_MAX),
-        Move(&this->leftAnkle, Joint::POS_MIDDLE, Joint::POS_MAX)
+    Move *leanRight[] = {
+        &this->rightAnkleMiddleToMax,
+        &this->leftAnkleMiddleToMax
     };
 
-    Move rotateFromLeftToCenter[] = {
-        Move(&this->rightHip, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&this->leftHip, Joint::POS_MAX, Joint::POS_MIDDLE)
+    Move *rotateFromLeftToCenter[] = {
+        &this->rightHipMaxToMiddle,
+        &this->leftHipMaxToMiddle
     };
 
-    Move stepRight[] = {
-        Move(&this->rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&this->leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&this->rightHip, Joint::POS_MIDDLE, Joint::POS_MIN),
-        Move(&this->leftHip, Joint::POS_MIDDLE, Joint::POS_MIN)
+    Move *stepRight[] = {
+        &this->rightAnkleMaxToMiddle,
+        &this->leftAnkleMaxToMiddle,
+        &this->rightHipMiddleToMin,
+        &this->leftHipMiddleToMin
     };
 
-    Move leanLeft[] = {
-        Move(&this->rightAnkle, Joint::POS_MIDDLE, Joint::POS_MIN),
-        Move(&this->leftAnkle, Joint::POS_MIDDLE, Joint::POS_MIN)
+    Move *leanLeft[] = {
+        &this->rightAnkleMiddleToMin,
+        &this->leftAnkleMiddleToMin
     };
 
-    Move rotateFromRightToCenter[] = {
-        Move(&this->rightHip, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&this->leftHip, Joint::POS_MIN, Joint::POS_MIDDLE)
+    Move *rotateFromRightToCenter[] = {
+        &this->rightHipMinToMiddle,
+        &this->leftHipMinToMiddle
     };
 
     this->moveJoints(stepLeft);
@@ -77,9 +97,9 @@ void Robot::stepForward()
 
     if (distance > 0 && distance <= this->stopDistance)
     {
-        Move stepDown[] = {
-            Move(&this->rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-            Move(&this->leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
+        Move *stepDown[] = {
+            &this->rightAnkleMaxToMiddle,
+            &this->leftAnkleMaxToMiddle
         };
 
         this->moveJoints(stepDown);
@@ -106,9 +126,9 @@ void Robot::stepForward()
 
     if (distance > 0 && distance <= this->stopDistance)
     {
-        Move stepDown[] = {
-            Move(&this->rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-            Move(&this->leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
+        Move *stepDown[] = {
+            &this->rightAnkleMinToMiddle,
+            &this->leftAnkleMinToMiddle
         };
 
         this->moveJoints(stepDown);
@@ -130,40 +150,40 @@ void Robot::stepForward()
 
 void Robot::turnLeft()
 {
-    Move leanLeft[] = { 
-        Move(&this->rightAnkle, Joint::POS_MIDDLE, Joint::POS_MIN), 
-        Move(&this->leftAnkle, Joint::POS_MIDDLE, Joint::POS_MIN)
+    Move *leanLeft[] = { 
+        &this->rightAnkleMiddleToMin,
+        &this->leftAnkleMiddleToMin
     };
 
-    Move rotateLeftHip[] = {
-        Move(&this->rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&this->leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&this->leftHip, Joint::POS_MIDDLE, Joint::POS_MAX)
+    Move *rotateLeftHip[] = {
+        &this->rightAnkleMinToMiddle,
+        &this->leftAnkleMinToMiddle,
+        &this->leftHipMiddleToMax
     };
 
-    Move leanRight[] = {
-        Move(&this->rightAnkle, Joint::POS_MIDDLE, Joint::POS_MAX),
-        Move(&this->leftAnkle, Joint::POS_MIDDLE, Joint::POS_MAX)
+    Move *leanRight[] = {
+        &this->rightAnkleMiddleToMax,
+        &this->leftAnkleMiddleToMax
     };
 
-    Move rotateRightHip[] = {
-        Move(&this->rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&this->leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&this->rightHip, Joint::POS_MIDDLE, Joint::POS_MAX),
-        Move(&this->leftHip, Joint::POS_MAX, Joint::POS_MIDDLE)
+    Move *rotateRightHip[] = {
+        &this->rightAnkleMaxToMiddle,
+        &this->leftAnkleMaxToMiddle,
+        &this->rightHipMiddleToMax,
+        &this->leftHipMaxToMiddle
     };
 
-    Move rotateBothHips[] = {
-        Move(&this->rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&this->leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&this->rightHip, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&this->leftHip, Joint::POS_MIDDLE, Joint::POS_MAX)
+    Move *rotateBothHips[] = {
+        &this->rightAnkleMinToMiddle,
+        &this->leftAnkleMinToMiddle,
+        &this->rightHipMaxToMiddle,
+        &this->leftHipMiddleToMax
     };
 
-    Move finishTurn[] = {
-        Move(&this->rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE), 
-        Move(&this->leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&this->leftHip, Joint::POS_MAX, Joint::POS_MIDDLE)
+    Move *finishTurn[] = {
+        &this->rightAnkleMaxToMiddle,
+        &this->leftAnkleMaxToMiddle,
+        &this->leftHipMaxToMiddle
     };
 
     this->moveJoints(leanLeft);
@@ -178,40 +198,40 @@ void Robot::turnLeft()
 
 void Robot::turnRight()
 {
-    Move leanRight[] = {
-        Move(&this->rightAnkle, Joint::POS_MIDDLE, Joint::POS_MAX),
-        Move(&this->leftAnkle, Joint::POS_MIDDLE, Joint::POS_MAX)
+    Move *leanRight[] = {
+        &this->rightAnkleMiddleToMax,
+        &this->leftAnkleMiddleToMax
     };
 
-    Move rotateRightHip[] = {
-        Move(&this->rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&this->leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&this->rightHip, Joint::POS_MIDDLE, Joint::POS_MIN)
+    Move *rotateRightHip[] = {
+        &this->rightAnkleMaxToMiddle,
+        &this->leftAnkleMaxToMiddle,
+        &this->rightHipMiddleToMin
     };
 
-    Move leanLeft[] = {
-        Move(&this->rightAnkle, Joint::POS_MIDDLE, Joint::POS_MIN),
-        Move(&this->leftAnkle, Joint::POS_MIDDLE, Joint::POS_MIN)
+    Move *leanLeft[] = {
+        &this->rightAnkleMiddleToMin,
+        &this->leftAnkleMiddleToMin
     };
 
-    Move rotateLeftHip[] = {
-        Move(&this->rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&this->leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&this->rightHip, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&this->leftHip, Joint::POS_MIDDLE, Joint::POS_MIN)
+    Move *rotateLeftHip[] = {
+        &this->rightAnkleMinToMiddle,
+        &this->leftAnkleMinToMiddle,
+        &this->rightHipMinToMiddle,
+        &this->leftHipMiddleToMin
     };
 
-    Move rotateBothHips[] = {
-        Move(&this->rightAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&this->leftAnkle, Joint::POS_MAX, Joint::POS_MIDDLE),
-        Move(&this->rightHip, Joint::POS_MIDDLE, Joint::POS_MIN),
-        Move(&this->leftHip, Joint::POS_MIN, Joint::POS_MIDDLE)
+    Move *rotateBothHips[] = {
+        &this->rightAnkleMaxToMiddle,
+        &this->leftAnkleMaxToMiddle,
+        &this->rightHipMiddleToMin,
+        &this->leftHipMinToMiddle
     };
 
-    Move finishTurn[] = {
-        Move(&this->rightAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&this->leftAnkle, Joint::POS_MIN, Joint::POS_MIDDLE),
-        Move(&this->rightHip, Joint::POS_MIN, Joint::POS_MIDDLE)
+    Move *finishTurn[] = {
+        &this->rightAnkleMinToMiddle,
+        &this->leftAnkleMinToMiddle,
+        &this->rightHipMinToMiddle
     };
     
     this->moveJoints(leanRight);
@@ -224,14 +244,14 @@ void Robot::turnRight()
     this->moveJoints(finishTurn);
 }
 
-void Robot::moveJointsImpl(const int numMoves, Move* moves)
+void Robot::moveJointsImpl(const int numMoves, Move** moves)
 {
     int i = 0, j = 0;
     int minDistance = INT_MAX;
 
     for (i = 0; i < numMoves; ++i)
     {
-        Move* move = &moves[i];
+        Move* move = moves[i];
         const Joint* joint = move->joint;
         const int from = joint->getValue(move->from);
         const int to = joint->getValue(move->to);
@@ -258,7 +278,7 @@ void Robot::moveJointsImpl(const int numMoves, Move* moves)
     // determine increment for each position update
     for (i = 0; i < numMoves; ++i)
     {
-        Move* move = &moves[i];
+        Move* move = moves[i];
         const Joint* joint = move->joint;
 
         move->increment = static_cast<float>(move->distance) / static_cast<float>(minDistance);
@@ -269,7 +289,7 @@ void Robot::moveJointsImpl(const int numMoves, Move* moves)
     {
         for (j = 0; j < numMoves; ++j)
         {
-            Move* move = &moves[j];
+            Move* move = moves[j];
             const Joint* joint = move->joint;
             int pos = joint->getValue(move->from) + move->direction * i * move->increment;
 

@@ -1,20 +1,20 @@
 #include "Robot.h"
 
-#define RIGHT_ANKLE_POS_LEFT    900
-#define RIGHT_ANKLE_POS_MIDDLE  1510
-#define RIGHT_ANKLE_POS_RIGHT   1800
+#define RIGHT_ANKLE_POS_LEFT    890
+#define RIGHT_ANKLE_POS_MIDDLE  1500
+#define RIGHT_ANKLE_POS_RIGHT   1790
 
-#define LEFT_ANKLE_POS_LEFT     1150
-#define LEFT_ANKLE_POS_MIDDLE   1490
-#define LEFT_ANKLE_POS_RIGHT    2200
+#define LEFT_ANKLE_POS_LEFT     1130
+#define LEFT_ANKLE_POS_MIDDLE   1470
+#define LEFT_ANKLE_POS_RIGHT    2180
 
-#define RIGHT_HIP_POS_MIN       960
-#define RIGHT_HIP_POS_MIDDLE    1290
-#define RIGHT_HIP_POS_MAX       1600
+#define RIGHT_HIP_POS_MIN       940
+#define RIGHT_HIP_POS_MIDDLE    1270
+#define RIGHT_HIP_POS_MAX       1580
 
-#define LEFT_HIP_POS_MIN        1100
-#define LEFT_HIP_POS_MIDDLE     1500
-#define LEFT_HIP_POS_MAX        1870
+#define LEFT_HIP_POS_MIN        1050
+#define LEFT_HIP_POS_MIDDLE     1450
+#define LEFT_HIP_POS_MAX        1820
 
 #define RIGHT_ANKLE_PIN         5
 #define LEFT_ANKLE_PIN          4
